@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33F90E6B-D194-426C-8EA0-FC6558A159A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>mainForm.My.MyApplication</StartupObject>
+    <RootNamespace>mainForm</RootNamespace>
+    <AssemblyName>mainForm</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>mainForm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>mainForm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="finance.designer.vb">
+      <DependentUpon>finance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="finance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finReport.designer.vb">
+      <DependentUpon>finReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="finReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee.designer.vb">
+      <DependentUpon>employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empInfo.designer.vb">
+      <DependentUpon>empInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empSchedule.designer.vb">
+      <DependentUpon>empSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empNewSchedule.designer.vb">
+      <DependentUpon>empNewSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empNewSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empSchOverview.designer.vb">
+      <DependentUpon>empSchOverview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empSchOverview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empAdd.designer.vb">
+      <DependentUpon>empAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="empAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alerts.designer.vb">
+      <DependentUpon>alerts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alerts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alertsPending.designer.vb">
+      <DependentUpon>alertsPending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alertsPending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alertsDetails.designer.vb">
+      <DependentUpon>alertsDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alertsDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alertConfirm.designer.vb">
+      <DependentUpon>alertConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alertConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alertResults.designer.vb">
+      <DependentUpon>alertResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="alertResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memConfirm.designer.vb">
+      <DependentUpon>memConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memConfirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memInfo.designer.vb">
+      <DependentUpon>memInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memResults.designer.vb">
+      <DependentUpon>memResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member.designer.vb">
+      <DependentUpon>member.vb</DependentUpon>
+    </Compile>
+    <Compile Include="member.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invUpdate.designer.vb">
+      <DependentUpon>invUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invDel.designer.vb">
+      <DependentUpon>invDel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invDel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invAdd.designer.vb">
+      <DependentUpon>invAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invSearch.designer.vb">
+      <DependentUpon>invSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invInfo.designer.vb">
+      <DependentUpon>invInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventory.designer.vb">
+      <DependentUpon>inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesInfo.Designer.vb">
+      <DependentUpon>salesInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salesInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="upc.Designer.vb">
+      <DependentUpon>upc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="upc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="titleInfo.Designer.vb">
+      <DependentUpon>titleInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="titleInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.vb">
+      <DependentUpon>payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirm.Designer.vb">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="completeFin.Designer.vb">
+      <DependentUpon>completeFin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="completeFin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="finance.resx">
+      <DependentUpon>finance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finReport.resx">
+      <DependentUpon>finReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee.resx">
+      <DependentUpon>employee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empInfo.resx">
+      <DependentUpon>empInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empSchedule.resx">
+      <DependentUpon>empSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empNewSchedule.resx">
+      <DependentUpon>empNewSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empSchOverview.resx">
+      <DependentUpon>empSchOverview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empAdd.resx">
+      <DependentUpon>empAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alerts.resx">
+      <DependentUpon>alerts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alertsPending.resx">
+      <DependentUpon>alertsPending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alertsDetails.resx">
+      <DependentUpon>alertsDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alertConfirm.resx">
+      <DependentUpon>alertConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alertResults.resx">
+      <DependentUpon>alertResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memConfirm.resx">
+      <DependentUpon>memConfirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memInfo.resx">
+      <DependentUpon>memInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memResults.resx">
+      <DependentUpon>memResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member.resx">
+      <DependentUpon>member.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invUpdate.resx">
+      <DependentUpon>invUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invDel.resx">
+      <DependentUpon>invDel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invAdd.resx">
+      <DependentUpon>invAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invSearch.resx">
+      <DependentUpon>invSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invInfo.resx">
+      <DependentUpon>invInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory.resx">
+      <DependentUpon>inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesInfo.resx">
+      <DependentUpon>salesInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upc.resx">
+      <DependentUpon>upc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="titleInfo.resx">
+      <DependentUpon>titleInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirm.resx">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="completeFin.resx">
+      <DependentUpon>completeFin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
