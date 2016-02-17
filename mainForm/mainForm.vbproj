@@ -85,6 +85,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="address.vb" />
+    <Compile Include="creditCard.vb" />
     <Compile Include="finance.designer.vb">
       <DependentUpon>finance.vb</DependentUpon>
     </Compile>

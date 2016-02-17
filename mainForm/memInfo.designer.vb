@@ -33,10 +33,10 @@ Partial Class memInfo
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.street = New System.Windows.Forms.TextBox()
+        Me.city = New System.Windows.Forms.TextBox()
+        Me.state = New System.Windows.Forms.TextBox()
+        Me.zip = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -174,33 +174,33 @@ Partial Class memInfo
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Experiration Date"
         '
-        'TextBox2
+        'street
         '
-        Me.TextBox2.Location = New System.Drawing.Point(106, 299)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(152, 24)
-        Me.TextBox2.TabIndex = 11
+        Me.street.Location = New System.Drawing.Point(106, 299)
+        Me.street.Name = "street"
+        Me.street.Size = New System.Drawing.Size(152, 24)
+        Me.street.TabIndex = 11
         '
-        'TextBox3
+        'city
         '
-        Me.TextBox3.Location = New System.Drawing.Point(106, 357)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(152, 24)
-        Me.TextBox3.TabIndex = 12
+        Me.city.Location = New System.Drawing.Point(106, 357)
+        Me.city.Name = "city"
+        Me.city.Size = New System.Drawing.Size(152, 24)
+        Me.city.TabIndex = 12
         '
-        'TextBox4
+        'state
         '
-        Me.TextBox4.Location = New System.Drawing.Point(106, 408)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(152, 24)
-        Me.TextBox4.TabIndex = 13
+        Me.state.Location = New System.Drawing.Point(106, 408)
+        Me.state.Name = "state"
+        Me.state.Size = New System.Drawing.Size(152, 24)
+        Me.state.TabIndex = 13
         '
-        'TextBox5
+        'zip
         '
-        Me.TextBox5.Location = New System.Drawing.Point(106, 461)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(152, 24)
-        Me.TextBox5.TabIndex = 14
+        Me.zip.Location = New System.Drawing.Point(106, 461)
+        Me.zip.Name = "zip"
+        Me.zip.Size = New System.Drawing.Size(152, 24)
+        Me.zip.TabIndex = 14
         '
         'Label10
         '
@@ -369,10 +369,10 @@ Partial Class memInfo
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.zip)
+        Me.Controls.Add(Me.state)
+        Me.Controls.Add(Me.city)
+        Me.Controls.Add(Me.street)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(Me.TextBox1)
@@ -403,10 +403,10 @@ Partial Class memInfo
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents street As System.Windows.Forms.TextBox
+    Friend WithEvents city As System.Windows.Forms.TextBox
+    Friend WithEvents state As System.Windows.Forms.TextBox
+    Friend WithEvents zip As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
