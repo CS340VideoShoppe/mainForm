@@ -3,7 +3,10 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         memConfirm.Show()
 
-        Dim address1 As New address("1234", "42", "some street", "Florence", "SC", "29501", "", "US")
+        Dim address1 As New address("", "234", street.Text, "", "", "", "", "US")
+
+
+
 
     End Sub
 

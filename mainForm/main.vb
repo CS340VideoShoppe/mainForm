@@ -22,7 +22,7 @@
         End If
 
         If RadioButton3.Checked = True Then
-            employee.Show()
+            employeeUI.Show()
             Me.Hide()
 
         End If
