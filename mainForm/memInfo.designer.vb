@@ -30,8 +30,8 @@ Partial Class memInfo
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.creditNum = New System.Windows.Forms.TextBox()
+        Me.expDate = New System.Windows.Forms.MaskedTextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.street = New System.Windows.Forms.TextBox()
         Me.city = New System.Windows.Forms.TextBox()
@@ -43,16 +43,18 @@ Partial Class memInfo
         Me.Label13 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.memName = New System.Windows.Forms.TextBox()
+        Me.phone = New System.Windows.Forms.TextBox()
+        Me.email = New System.Windows.Forms.TextBox()
+        Me.dob = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.ID = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -143,26 +145,26 @@ Partial Class memInfo
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Late Fees"
         '
-        'TextBox1
+        'creditNum
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox1.Location = New System.Drawing.Point(508, 299)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 24)
-        Me.TextBox1.TabIndex = 8
-        Me.TextBox1.Text = "*******-1234"
+        Me.creditNum.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.creditNum.Location = New System.Drawing.Point(508, 299)
+        Me.creditNum.Margin = New System.Windows.Forms.Padding(4)
+        Me.creditNum.Name = "creditNum"
+        Me.creditNum.Size = New System.Drawing.Size(200, 24)
+        Me.creditNum.TabIndex = 8
+        Me.creditNum.Text = "*******-1234"
         '
-        'MaskedTextBox1
+        'expDate
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(508, 357)
-        Me.MaskedTextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaskedTextBox1.Mask = "00/00/0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(200, 24)
-        Me.MaskedTextBox1.TabIndex = 9
-        Me.MaskedTextBox1.Text = "01012017"
-        Me.MaskedTextBox1.ValidatingType = GetType(Date)
+        Me.expDate.Location = New System.Drawing.Point(508, 357)
+        Me.expDate.Margin = New System.Windows.Forms.Padding(4)
+        Me.expDate.Mask = "00/00/0000"
+        Me.expDate.Name = "expDate"
+        Me.expDate.Size = New System.Drawing.Size(200, 24)
+        Me.expDate.TabIndex = 9
+        Me.expDate.Text = "01012017"
+        Me.expDate.ValidatingType = GetType(Date)
         '
         'Label9
         '
@@ -260,33 +262,33 @@ Partial Class memInfo
         Me.ListBox2.Size = New System.Drawing.Size(294, 94)
         Me.ListBox2.TabIndex = 20
         '
-        'TextBox6
+        'memName
         '
-        Me.TextBox6.Location = New System.Drawing.Point(158, 121)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(209, 24)
-        Me.TextBox6.TabIndex = 21
+        Me.memName.Location = New System.Drawing.Point(158, 121)
+        Me.memName.Name = "memName"
+        Me.memName.Size = New System.Drawing.Size(209, 24)
+        Me.memName.TabIndex = 21
         '
-        'TextBox7
+        'phone
         '
-        Me.TextBox7.Location = New System.Drawing.Point(158, 177)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(209, 24)
-        Me.TextBox7.TabIndex = 22
+        Me.phone.Location = New System.Drawing.Point(158, 177)
+        Me.phone.Name = "phone"
+        Me.phone.Size = New System.Drawing.Size(209, 24)
+        Me.phone.TabIndex = 22
         '
-        'TextBox8
+        'email
         '
-        Me.TextBox8.Location = New System.Drawing.Point(564, 127)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(144, 24)
-        Me.TextBox8.TabIndex = 23
+        Me.email.Location = New System.Drawing.Point(564, 127)
+        Me.email.Name = "email"
+        Me.email.Size = New System.Drawing.Size(144, 24)
+        Me.email.TabIndex = 23
         '
-        'TextBox9
+        'dob
         '
-        Me.TextBox9.Location = New System.Drawing.Point(564, 183)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(144, 24)
-        Me.TextBox9.TabIndex = 24
+        Me.dob.Location = New System.Drawing.Point(564, 183)
+        Me.dob.Name = "dob"
+        Me.dob.Size = New System.Drawing.Size(144, 24)
+        Me.dob.TabIndex = 24
         '
         'Label14
         '
@@ -347,22 +349,40 @@ Partial Class memInfo
         Me.RadioButton2.Text = "No"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
+        'ID
+        '
+        Me.ID.Location = New System.Drawing.Point(331, 68)
+        Me.ID.Name = "ID"
+        Me.ID.Size = New System.Drawing.Size(203, 24)
+        Me.ID.TabIndex = 31
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(244, 68)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(81, 18)
+        Me.Label16.TabIndex = 32
+        Me.Label16.Text = "Member ID"
+        '
         'memInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.ClientSize = New System.Drawing.Size(1157, 569)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.ID)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.dob)
+        Me.Controls.Add(Me.email)
+        Me.Controls.Add(Me.phone)
+        Me.Controls.Add(Me.memName)
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label13)
@@ -374,8 +394,8 @@ Partial Class memInfo
         Me.Controls.Add(Me.city)
         Me.Controls.Add(Me.street)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.MaskedTextBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.expDate)
+        Me.Controls.Add(Me.creditNum)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -400,8 +420,8 @@ Partial Class memInfo
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents creditNum As System.Windows.Forms.TextBox
+    Friend WithEvents expDate As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents street As System.Windows.Forms.TextBox
     Friend WithEvents city As System.Windows.Forms.TextBox
@@ -413,14 +433,16 @@ Partial Class memInfo
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents ListBox2 As System.Windows.Forms.ListBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents memName As System.Windows.Forms.TextBox
+    Friend WithEvents phone As System.Windows.Forms.TextBox
+    Friend WithEvents email As System.Windows.Forms.TextBox
+    Friend WithEvents dob As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents ID As System.Windows.Forms.TextBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class

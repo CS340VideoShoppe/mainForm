@@ -47,7 +47,6 @@ C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\b
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\bin\Debug\mainForm.xml
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.finance.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.finReport.resources
-C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.employee.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.empInfo.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.empSchedule.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.empNewSchedule.resources
@@ -78,3 +77,4 @@ C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\o
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.completeFin.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.Resources.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.vbproj.GenerateResource.Cache
+C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.employeeUI.resources

@@ -1,26 +1,29 @@
-﻿Public Class employee
+﻿Public Class Employee
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        empInfo.Show()
-        Me.Hide()
+    Private Property lastName As String
+    Private Property firstName As String
+    Private Property midInit As String
+    Private Property hoursWorked As Double
+    Private Property schedule As Schedule
+    Private Property payRate As Double
 
-    End Sub
+    Public Sub New(lastName As String, firstName As String, midInit As String, hoursWorked As Double,
+                   schedule As Schedule, payRate As Double)
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        empSchOverview.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        empAdd.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Main.Show()
-        Me.Hide()
+        Me.lastName = lastName
+        Me.firstName = firstName
+        Me.midInit = midInit
+        Me.hoursWorked = hoursWorked
+        Me.schedule = schedule
+        Me.payRate = payRate
 
     End Sub
+
+    Public Function displaySchedule() As Schedule
+        Return Me.schedule
+
+    End Function
+
+
+
 End Class

@@ -86,7 +86,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="address.vb" />
+    <Compile Include="Alert.vb" />
     <Compile Include="creditCard.vb" />
+    <Compile Include="Customer.vb" />
+    <Compile Include="DVD.vb" />
+    <Compile Include="EmailAddress.vb" />
+    <Compile Include="Employee.vb" />
+    <Compile Include="ExpiryAlert.vb" />
     <Compile Include="finance.designer.vb">
       <DependentUpon>finance.vb</DependentUpon>
     </Compile>
@@ -99,10 +105,10 @@
     <Compile Include="finReport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="employee.designer.vb">
-      <DependentUpon>employee.vb</DependentUpon>
+    <Compile Include="employeeUI.designer.vb">
+      <DependentUpon>employeeUI.vb</DependentUpon>
     </Compile>
-    <Compile Include="employee.vb">
+    <Compile Include="employeeUI.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="empInfo.designer.vb">
@@ -238,12 +244,19 @@
     <Compile Include="login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MonthlyReport.vb" />
+    <Compile Include="OverdueAlert.vb" />
+    <Compile Include="Phone.vb" />
+    <Compile Include="Receipt.vb" />
+    <Compile Include="Rental.vb" />
+    <Compile Include="Reward.vb" />
     <Compile Include="salesInfo.Designer.vb">
       <DependentUpon>salesInfo.vb</DependentUpon>
     </Compile>
     <Compile Include="salesInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Schedule.vb" />
     <Compile Include="upc.Designer.vb">
       <DependentUpon>upc.vb</DependentUpon>
     </Compile>
@@ -289,6 +302,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="WaitingList.vb" />
+    <Compile Include="WaitingListAlert.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="finance.resx">
@@ -297,8 +312,8 @@
     <EmbeddedResource Include="finReport.resx">
       <DependentUpon>finReport.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employee.resx">
-      <DependentUpon>employee.vb</DependentUpon>
+    <EmbeddedResource Include="employeeUI.resx">
+      <DependentUpon>employeeUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="empInfo.resx">
       <DependentUpon>empInfo.vb</DependentUpon>
