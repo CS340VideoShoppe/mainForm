@@ -62,7 +62,7 @@ Partial Class upc
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(102, 34)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Next"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -71,10 +71,10 @@ Partial Class upc
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 34)
         Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Back"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Form4
+        'upc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -85,7 +85,7 @@ Partial Class upc
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form4"
+        Me.Name = "upc"
         Me.Text = "Sales Transaction"
         Me.ResumeLayout(False)
         Me.PerformLayout()

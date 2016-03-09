@@ -22,95 +22,274 @@ Partial Class memInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.creditNum = New System.Windows.Forms.TextBox()
-        Me.expDate = New System.Windows.Forms.MaskedTextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.street = New System.Windows.Forms.TextBox()
-        Me.city = New System.Windows.Forms.TextBox()
-        Me.state = New System.Windows.Forms.TextBox()
-        Me.zip = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.memName = New System.Windows.Forms.TextBox()
-        Me.phone = New System.Windows.Forms.TextBox()
-        Me.email = New System.Windows.Forms.TextBox()
-        Me.dob = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.ID = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.expDate = New System.Windows.Forms.MaskedTextBox()
+        Me.creditNum = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.city = New System.Windows.Forms.TextBox()
+        Me.state = New System.Windows.Forms.TextBox()
+        Me.zip = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.street = New System.Windows.Forms.TextBox()
+        Me.dob = New System.Windows.Forms.TextBox()
+        Me.email = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.memName = New System.Windows.Forms.TextBox()
+        Me.phone = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.ID = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'Label1
+        'Label7
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(38, 121)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Name"
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(851, 74)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(111, 18)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Current Rentals"
         '
-        'Label2
+        'Label8
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(38, 177)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Phone Number"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(876, 244)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 18)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Late Fees"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 18
+        Me.ListBox1.Items.AddRange(New Object() {"Titles          Due", "Title 1         12/10/2015    ", "Title 2         12/01/2015", "Title 3         12/07/2015"})
+        Me.ListBox1.Location = New System.Drawing.Point(761, 106)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.ScrollAlwaysVisible = True
+        Me.ListBox1.Size = New System.Drawing.Size(294, 112)
+        Me.ListBox1.TabIndex = 19
+        '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 18
+        Me.ListBox2.Items.AddRange(New Object() {"Title          Due                   Amount Due", "Title 1       12/01/2015      $3.50"})
+        Me.ListBox2.Location = New System.Drawing.Point(761, 271)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.ScrollAlwaysVisible = True
+        Me.ListBox2.Size = New System.Drawing.Size(294, 94)
+        Me.ListBox2.TabIndex = 20
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(504, 9)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(152, 20)
+        Me.Label14.TabIndex = 25
+        Me.Label14.Text = "Member Summary"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(345, 397)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(154, 35)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "Back"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(508, 397)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(154, 35)
+        Me.Button2.TabIndex = 27
+        Me.Button2.Text = "Update Member Info"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(443, 358)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(51, 22)
+        Me.RadioButton1.TabIndex = 29
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Yes"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(522, 358)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(46, 22)
+        Me.RadioButton2.TabIndex = 30
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "No"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(440, 331)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(128, 18)
+        Me.Label15.TabIndex = 28
+        Me.Label15.Text = "Sign Up For Alerts"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(378, 290)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(121, 18)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Experiration Date"
+        '
+        'expDate
+        '
+        Me.expDate.Location = New System.Drawing.Point(508, 284)
+        Me.expDate.Margin = New System.Windows.Forms.Padding(4)
+        Me.expDate.Mask = "00/00/0000"
+        Me.expDate.Name = "expDate"
+        Me.expDate.Size = New System.Drawing.Size(200, 24)
+        Me.expDate.TabIndex = 9
+        Me.expDate.Text = "01012017"
+        Me.expDate.ValidatingType = GetType(Date)
+        '
+        'creditNum
+        '
+        Me.creditNum.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.creditNum.Location = New System.Drawing.Point(508, 238)
+        Me.creditNum.Margin = New System.Windows.Forms.Padding(4)
+        Me.creditNum.Name = "creditNum"
+        Me.creditNum.Size = New System.Drawing.Size(200, 24)
+        Me.creditNum.TabIndex = 8
+        Me.creditNum.Text = "*******-1234"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(359, 241)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(140, 18)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Credit Card Number"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(139, 271)
+        Me.Label3.Location = New System.Drawing.Point(189, 218)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 18)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Address"
         '
-        'Label4
+        'city
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(409, 127)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(108, 18)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "E-mail Address"
+        Me.city.Location = New System.Drawing.Point(132, 284)
+        Me.city.Name = "city"
+        Me.city.Size = New System.Drawing.Size(152, 24)
+        Me.city.TabIndex = 12
         '
-        'Label5
+        'state
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(345, 305)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(140, 18)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Credit Card Number"
+        Me.state.Location = New System.Drawing.Point(132, 325)
+        Me.state.Name = "state"
+        Me.state.Size = New System.Drawing.Size(152, 24)
+        Me.state.TabIndex = 13
+        '
+        'zip
+        '
+        Me.zip.Location = New System.Drawing.Point(132, 358)
+        Me.zip.Name = "zip"
+        Me.zip.Size = New System.Drawing.Size(152, 24)
+        Me.zip.TabIndex = 14
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(93, 358)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(28, 18)
+        Me.Label13.TabIndex = 18
+        Me.Label13.Text = "Zip"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(84, 325)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(42, 18)
+        Me.Label12.TabIndex = 17
+        Me.Label12.Text = "State"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(93, 287)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(33, 18)
+        Me.Label11.TabIndex = 16
+        Me.Label11.Text = "City"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(75, 250)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(51, 18)
+        Me.Label10.TabIndex = 15
+        Me.Label10.Text = "Street "
+        '
+        'street
+        '
+        Me.street.Location = New System.Drawing.Point(132, 244)
+        Me.street.Name = "street"
+        Me.street.Size = New System.Drawing.Size(152, 24)
+        Me.street.TabIndex = 11
+        '
+        'dob
+        '
+        Me.dob.Location = New System.Drawing.Point(564, 183)
+        Me.dob.Name = "dob"
+        Me.dob.Size = New System.Drawing.Size(144, 24)
+        Me.dob.TabIndex = 24
+        '
+        'email
+        '
+        Me.email.Location = New System.Drawing.Point(564, 127)
+        Me.email.Name = "email"
+        Me.email.Size = New System.Drawing.Size(144, 24)
+        Me.email.TabIndex = 23
         '
         'Label6
         '
@@ -123,144 +302,16 @@ Partial Class memInfo
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Date of Birth"
         '
-        'Label7
+        'Label4
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(850, 183)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 18)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Current Rentals"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(879, 355)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 18)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Late Fees"
-        '
-        'creditNum
-        '
-        Me.creditNum.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.creditNum.Location = New System.Drawing.Point(508, 299)
-        Me.creditNum.Margin = New System.Windows.Forms.Padding(4)
-        Me.creditNum.Name = "creditNum"
-        Me.creditNum.Size = New System.Drawing.Size(200, 24)
-        Me.creditNum.TabIndex = 8
-        Me.creditNum.Text = "*******-1234"
-        '
-        'expDate
-        '
-        Me.expDate.Location = New System.Drawing.Point(508, 357)
-        Me.expDate.Margin = New System.Windows.Forms.Padding(4)
-        Me.expDate.Mask = "00/00/0000"
-        Me.expDate.Name = "expDate"
-        Me.expDate.Size = New System.Drawing.Size(200, 24)
-        Me.expDate.TabIndex = 9
-        Me.expDate.Text = "01012017"
-        Me.expDate.ValidatingType = GetType(Date)
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(345, 363)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(121, 18)
-        Me.Label9.TabIndex = 10
-        Me.Label9.Text = "Experiration Date"
-        '
-        'street
-        '
-        Me.street.Location = New System.Drawing.Point(106, 299)
-        Me.street.Name = "street"
-        Me.street.Size = New System.Drawing.Size(152, 24)
-        Me.street.TabIndex = 11
-        '
-        'city
-        '
-        Me.city.Location = New System.Drawing.Point(106, 357)
-        Me.city.Name = "city"
-        Me.city.Size = New System.Drawing.Size(152, 24)
-        Me.city.TabIndex = 12
-        '
-        'state
-        '
-        Me.state.Location = New System.Drawing.Point(106, 408)
-        Me.state.Name = "state"
-        Me.state.Size = New System.Drawing.Size(152, 24)
-        Me.state.TabIndex = 13
-        '
-        'zip
-        '
-        Me.zip.Location = New System.Drawing.Point(106, 461)
-        Me.zip.Name = "zip"
-        Me.zip.Size = New System.Drawing.Size(152, 24)
-        Me.zip.TabIndex = 14
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(49, 299)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(51, 18)
-        Me.Label10.TabIndex = 15
-        Me.Label10.Text = "Street "
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(49, 357)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(33, 18)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "City"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(49, 414)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(42, 18)
-        Me.Label12.TabIndex = 17
-        Me.Label12.Text = "State"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(49, 461)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(28, 18)
-        Me.Label13.TabIndex = 18
-        Me.Label13.Text = "Zip"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 18
-        Me.ListBox1.Items.AddRange(New Object() {"Titles          Due", "Title 1         12/10/2015    ", "Title 2         12/01/2015", "Title 3         12/07/2015"})
-        Me.ListBox1.Location = New System.Drawing.Point(761, 221)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.ScrollAlwaysVisible = True
-        Me.ListBox1.Size = New System.Drawing.Size(294, 112)
-        Me.ListBox1.TabIndex = 19
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 18
-        Me.ListBox2.Items.AddRange(New Object() {"Title          Due                   Amount Due", "Title 1       12/01/2015      $3.50"})
-        Me.ListBox2.Location = New System.Drawing.Point(761, 376)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.ScrollAlwaysVisible = True
-        Me.ListBox2.Size = New System.Drawing.Size(294, 94)
-        Me.ListBox2.TabIndex = 20
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(409, 127)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(108, 18)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "E-mail Address"
         '
         'memName
         '
@@ -276,85 +327,27 @@ Partial Class memInfo
         Me.phone.Size = New System.Drawing.Size(209, 24)
         Me.phone.TabIndex = 22
         '
-        'email
+        'Label2
         '
-        Me.email.Location = New System.Drawing.Point(564, 127)
-        Me.email.Name = "email"
-        Me.email.Size = New System.Drawing.Size(144, 24)
-        Me.email.TabIndex = 23
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(38, 177)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(108, 18)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Phone Number"
         '
-        'dob
+        'Label1
         '
-        Me.dob.Location = New System.Drawing.Point(564, 183)
-        Me.dob.Name = "dob"
-        Me.dob.Size = New System.Drawing.Size(144, 24)
-        Me.dob.TabIndex = 24
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(504, 9)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(152, 20)
-        Me.Label14.TabIndex = 25
-        Me.Label14.Text = "Member Summary"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(363, 522)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(154, 35)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Back"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(542, 522)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(154, 35)
-        Me.Button2.TabIndex = 27
-        Me.Button2.Text = "Update Member Info"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(345, 440)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(128, 18)
-        Me.Label15.TabIndex = 28
-        Me.Label15.Text = "Sign Up For Alerts"
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(517, 414)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(51, 22)
-        Me.RadioButton1.TabIndex = 29
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Yes"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(517, 459)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(46, 22)
-        Me.RadioButton2.TabIndex = 30
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "No"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'ID
-        '
-        Me.ID.Location = New System.Drawing.Point(331, 68)
-        Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(203, 24)
-        Me.ID.TabIndex = 31
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(38, 121)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 18)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Name"
         '
         'Label16
         '
@@ -365,12 +358,19 @@ Partial Class memInfo
         Me.Label16.TabIndex = 32
         Me.Label16.Text = "Member ID"
         '
+        'ID
+        '
+        Me.ID.Location = New System.Drawing.Point(331, 68)
+        Me.ID.Name = "ID"
+        Me.ID.Size = New System.Drawing.Size(203, 24)
+        Me.ID.TabIndex = 31
+        '
         'memInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(1157, 569)
+        Me.ClientSize = New System.Drawing.Size(1095, 444)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.ID)
         Me.Controls.Add(Me.RadioButton2)
@@ -412,37 +412,37 @@ Partial Class memInfo
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents creditNum As System.Windows.Forms.TextBox
-    Friend WithEvents expDate As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents street As System.Windows.Forms.TextBox
-    Friend WithEvents city As System.Windows.Forms.TextBox
-    Friend WithEvents state As System.Windows.Forms.TextBox
-    Friend WithEvents zip As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents ListBox2 As System.Windows.Forms.ListBox
-    Friend WithEvents memName As System.Windows.Forms.TextBox
-    Friend WithEvents phone As System.Windows.Forms.TextBox
-    Friend WithEvents email As System.Windows.Forms.TextBox
-    Friend WithEvents dob As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents ID As System.Windows.Forms.TextBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents expDate As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents creditNum As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents city As System.Windows.Forms.TextBox
+    Friend WithEvents state As System.Windows.Forms.TextBox
+    Friend WithEvents zip As System.Windows.Forms.TextBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents street As System.Windows.Forms.TextBox
+    Friend WithEvents dob As System.Windows.Forms.TextBox
+    Friend WithEvents email As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents memName As System.Windows.Forms.TextBox
+    Friend WithEvents phone As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents ID As System.Windows.Forms.TextBox
 End Class
