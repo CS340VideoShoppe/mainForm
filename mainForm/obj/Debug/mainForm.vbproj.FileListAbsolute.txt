@@ -78,3 +78,5 @@ C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\o
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.Resources.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.vbproj.GenerateResource.Cache
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.employeeUI.resources
+C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.customerAdd.resources
+C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.memberID.resources

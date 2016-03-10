@@ -89,6 +89,12 @@
     <Compile Include="Alert.vb" />
     <Compile Include="creditCard.vb" />
     <Compile Include="Customer.vb" />
+    <Compile Include="customerAdd.Designer.vb">
+      <DependentUpon>customerAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customerAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DVD.vb" />
     <Compile Include="EmailAddress.vb" />
     <Compile Include="Employee.vb" />
@@ -169,6 +175,12 @@
       <DependentUpon>alertResults.vb</DependentUpon>
     </Compile>
     <Compile Include="alertResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memberID.Designer.vb">
+      <DependentUpon>memberID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memberID.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="memConfirm.designer.vb">
@@ -306,6 +318,9 @@
     <Compile Include="WaitingListAlert.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="customerAdd.resx">
+      <DependentUpon>customerAdd.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="finance.resx">
       <DependentUpon>finance.vb</DependentUpon>
     </EmbeddedResource>
@@ -344,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="alertResults.resx">
       <DependentUpon>alertResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberID.resx">
+      <DependentUpon>memberID.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="memConfirm.resx">
       <DependentUpon>memConfirm.vb</DependentUpon>
