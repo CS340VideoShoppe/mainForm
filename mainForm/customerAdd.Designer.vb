@@ -41,7 +41,7 @@ Partial Class customerAdd
         Me.zip = New System.Windows.Forms.TextBox()
         Me.state = New System.Windows.Forms.TextBox()
         Me.city = New System.Windows.Forms.TextBox()
-        Me.street = New System.Windows.Forms.TextBox()
+        Me.streetNum = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.expDate = New System.Windows.Forms.MaskedTextBox()
         Me.creditNum = New System.Windows.Forms.TextBox()
@@ -55,6 +55,20 @@ Partial Class customerAdd
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.memID = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.apt = New System.Windows.Forms.TextBox()
+        Me.country = New System.Windows.Forms.TextBox()
+        Me.secCode = New System.Windows.Forms.TextBox()
+        Me.Bank = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label16
@@ -149,14 +163,14 @@ Partial Class customerAdd
         '
         'phone
         '
-        Me.phone.Location = New System.Drawing.Point(209, 65)
+        Me.phone.Location = New System.Drawing.Point(209, 92)
         Me.phone.Name = "phone"
         Me.phone.Size = New System.Drawing.Size(209, 20)
         Me.phone.TabIndex = 55
         '
         'memName
         '
-        Me.memName.Location = New System.Drawing.Point(209, 27)
+        Me.memName.Location = New System.Drawing.Point(209, 66)
         Me.memName.Name = "memName"
         Me.memName.Size = New System.Drawing.Size(209, 20)
         Me.memName.TabIndex = 54
@@ -199,31 +213,31 @@ Partial Class customerAdd
         '
         'zip
         '
-        Me.zip.Location = New System.Drawing.Point(93, 234)
+        Me.zip.Location = New System.Drawing.Point(93, 260)
         Me.zip.Name = "zip"
         Me.zip.Size = New System.Drawing.Size(152, 20)
         Me.zip.TabIndex = 47
         '
         'state
         '
-        Me.state.Location = New System.Drawing.Point(93, 208)
+        Me.state.Location = New System.Drawing.Point(93, 234)
         Me.state.Name = "state"
         Me.state.Size = New System.Drawing.Size(152, 20)
         Me.state.TabIndex = 46
         '
         'city
         '
-        Me.city.Location = New System.Drawing.Point(93, 260)
+        Me.city.Location = New System.Drawing.Point(93, 208)
         Me.city.Name = "city"
         Me.city.Size = New System.Drawing.Size(152, 20)
         Me.city.TabIndex = 45
         '
-        'street
+        'streetNum
         '
-        Me.street.Location = New System.Drawing.Point(93, 182)
-        Me.street.Name = "street"
-        Me.street.Size = New System.Drawing.Size(152, 20)
-        Me.street.TabIndex = 44
+        Me.streetNum.Location = New System.Drawing.Point(93, 182)
+        Me.streetNum.Name = "streetNum"
+        Me.streetNum.Size = New System.Drawing.Size(152, 20)
+        Me.streetNum.TabIndex = 44
         '
         'Label9
         '
@@ -323,7 +337,7 @@ Partial Class customerAdd
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(209, 104)
+        Me.TextBox1.Location = New System.Drawing.Point(209, 131)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(209, 20)
         Me.TextBox1.TabIndex = 66
@@ -332,7 +346,7 @@ Partial Class customerAdd
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(152, 27)
+        Me.Label7.Location = New System.Drawing.Point(155, 65)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(48, 18)
         Me.Label7.TabIndex = 67
@@ -342,7 +356,7 @@ Partial Class customerAdd
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(95, 65)
+        Me.Label8.Location = New System.Drawing.Point(97, 91)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(106, 18)
         Me.Label8.TabIndex = 68
@@ -352,11 +366,127 @@ Partial Class customerAdd
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(80, 104)
+        Me.Label17.Location = New System.Drawing.Point(80, 130)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(126, 18)
         Me.Label17.TabIndex = 69
         Me.Label17.Text = "Secondary Phone"
+        '
+        'memID
+        '
+        Me.memID.Location = New System.Drawing.Point(209, 26)
+        Me.memID.Name = "memID"
+        Me.memID.Size = New System.Drawing.Size(209, 20)
+        Me.memID.TabIndex = 70
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(344, 335)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(114, 63)
+        Me.Button4.TabIndex = 72
+        Me.Button4.Text = "Add Member"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'apt
+        '
+        Me.apt.Location = New System.Drawing.Point(93, 286)
+        Me.apt.Name = "apt"
+        Me.apt.Size = New System.Drawing.Size(152, 20)
+        Me.apt.TabIndex = 73
+        '
+        'country
+        '
+        Me.country.Location = New System.Drawing.Point(93, 312)
+        Me.country.Name = "country"
+        Me.country.Size = New System.Drawing.Size(152, 20)
+        Me.country.TabIndex = 74
+        '
+        'secCode
+        '
+        Me.secCode.Location = New System.Drawing.Point(587, 235)
+        Me.secCode.Name = "secCode"
+        Me.secCode.Size = New System.Drawing.Size(200, 20)
+        Me.secCode.TabIndex = 75
+        '
+        'Bank
+        '
+        Me.Bank.Location = New System.Drawing.Point(587, 261)
+        Me.Bank.Name = "Bank"
+        Me.Bank.Size = New System.Drawing.Size(200, 20)
+        Me.Bank.TabIndex = 76
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(534, 242)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(48, 13)
+        Me.Label18.TabIndex = 77
+        Me.Label18.Text = "Security "
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(542, 265)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(32, 13)
+        Me.Label19.TabIndex = 78
+        Me.Label19.Text = "Bank"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(59, 185)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(35, 13)
+        Me.Label20.TabIndex = 79
+        Me.Label20.Text = "Street"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(63, 208)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(24, 13)
+        Me.Label21.TabIndex = 80
+        Me.Label21.Text = "City"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(65, 238)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(22, 13)
+        Me.Label22.TabIndex = 81
+        Me.Label22.Text = "Zip"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(59, 265)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(32, 13)
+        Me.Label23.TabIndex = 82
+        Me.Label23.Text = "State"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(54, 289)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(33, 13)
+        Me.Label24.TabIndex = 83
+        Me.Label24.Text = "Apt #"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(49, 315)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(43, 13)
+        Me.Label25.TabIndex = 84
+        Me.Label25.Text = "Country"
         '
         'customerAdd
         '
@@ -364,6 +494,20 @@ Partial Class customerAdd
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ClientSize = New System.Drawing.Size(840, 453)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Bank)
+        Me.Controls.Add(Me.secCode)
+        Me.Controls.Add(Me.country)
+        Me.Controls.Add(Me.apt)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.memID)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -387,7 +531,7 @@ Partial Class customerAdd
         Me.Controls.Add(Me.zip)
         Me.Controls.Add(Me.state)
         Me.Controls.Add(Me.city)
-        Me.Controls.Add(Me.street)
+        Me.Controls.Add(Me.streetNum)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.expDate)
         Me.Controls.Add(Me.creditNum)
@@ -422,7 +566,7 @@ Partial Class customerAdd
     Friend WithEvents zip As System.Windows.Forms.TextBox
     Friend WithEvents state As System.Windows.Forms.TextBox
     Friend WithEvents city As System.Windows.Forms.TextBox
-    Friend WithEvents street As System.Windows.Forms.TextBox
+    Friend WithEvents streetNum As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents expDate As System.Windows.Forms.MaskedTextBox
     Friend WithEvents creditNum As System.Windows.Forms.TextBox
@@ -436,4 +580,18 @@ Partial Class customerAdd
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents memID As System.Windows.Forms.TextBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents apt As System.Windows.Forms.TextBox
+    Friend WithEvents country As System.Windows.Forms.TextBox
+    Friend WithEvents secCode As System.Windows.Forms.TextBox
+    Friend WithEvents Bank As System.Windows.Forms.TextBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
 End Class

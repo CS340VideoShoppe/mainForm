@@ -32,15 +32,19 @@ Partial Class invInfo
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.title = New System.Windows.Forms.TextBox()
+        Me.datetxt = New System.Windows.Forms.TextBox()
+        Me.genretxt = New System.Windows.Forms.TextBox()
+        Me.languagetxt = New System.Windows.Forms.TextBox()
+        Me.actorstxt = New System.Windows.Forms.TextBox()
+        Me.directortxt = New System.Windows.Forms.TextBox()
+        Me.statustxt = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.UPCtxt = New System.Windows.Forms.TextBox()
+        Me.agetxt = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.releaseDatepk = New System.Windows.Forms.DateTimePicker()
+        Me.releaseDatetxt = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -140,61 +144,61 @@ Partial Class invInfo
         Me.Button3.Text = "Back"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'title
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox1.Location = New System.Drawing.Point(123, 16)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(146, 20)
-        Me.TextBox1.TabIndex = 10
+        Me.title.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.title.Location = New System.Drawing.Point(123, 16)
+        Me.title.Name = "title"
+        Me.title.Size = New System.Drawing.Size(146, 20)
+        Me.title.TabIndex = 10
         '
-        'TextBox2
+        'datetxt
         '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox2.Location = New System.Drawing.Point(123, 58)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(146, 20)
-        Me.TextBox2.TabIndex = 11
+        Me.datetxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.datetxt.Location = New System.Drawing.Point(123, 58)
+        Me.datetxt.Name = "datetxt"
+        Me.datetxt.Size = New System.Drawing.Size(146, 20)
+        Me.datetxt.TabIndex = 11
         '
-        'TextBox3
+        'genretxt
         '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox3.Location = New System.Drawing.Point(123, 95)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(146, 20)
-        Me.TextBox3.TabIndex = 12
+        Me.genretxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.genretxt.Location = New System.Drawing.Point(123, 95)
+        Me.genretxt.Name = "genretxt"
+        Me.genretxt.Size = New System.Drawing.Size(146, 20)
+        Me.genretxt.TabIndex = 12
         '
-        'TextBox4
+        'languagetxt
         '
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox4.Location = New System.Drawing.Point(374, 19)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox4.TabIndex = 13
+        Me.languagetxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.languagetxt.Location = New System.Drawing.Point(374, 19)
+        Me.languagetxt.Name = "languagetxt"
+        Me.languagetxt.Size = New System.Drawing.Size(168, 20)
+        Me.languagetxt.TabIndex = 13
         '
-        'TextBox5
+        'actorstxt
         '
-        Me.TextBox5.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox5.Location = New System.Drawing.Point(374, 58)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox5.TabIndex = 14
+        Me.actorstxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.actorstxt.Location = New System.Drawing.Point(374, 58)
+        Me.actorstxt.Name = "actorstxt"
+        Me.actorstxt.Size = New System.Drawing.Size(168, 20)
+        Me.actorstxt.TabIndex = 14
         '
-        'TextBox6
+        'directortxt
         '
-        Me.TextBox6.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox6.Location = New System.Drawing.Point(374, 95)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(168, 20)
-        Me.TextBox6.TabIndex = 15
+        Me.directortxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.directortxt.Location = New System.Drawing.Point(374, 95)
+        Me.directortxt.Name = "directortxt"
+        Me.directortxt.Size = New System.Drawing.Size(168, 20)
+        Me.directortxt.TabIndex = 15
         '
-        'TextBox7
+        'statustxt
         '
-        Me.TextBox7.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox7.Location = New System.Drawing.Point(671, 20)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox7.TabIndex = 16
+        Me.statustxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.statustxt.Location = New System.Drawing.Point(671, 20)
+        Me.statustxt.Name = "statustxt"
+        Me.statustxt.Size = New System.Drawing.Size(122, 20)
+        Me.statustxt.TabIndex = 16
         '
         'Label8
         '
@@ -206,13 +210,45 @@ Partial Class invInfo
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "UPC"
         '
-        'TextBox8
+        'UPCtxt
         '
-        Me.TextBox8.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox8.Location = New System.Drawing.Point(671, 61)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox8.TabIndex = 18
+        Me.UPCtxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.UPCtxt.Location = New System.Drawing.Point(671, 61)
+        Me.UPCtxt.Name = "UPCtxt"
+        Me.UPCtxt.Size = New System.Drawing.Size(122, 20)
+        Me.UPCtxt.TabIndex = 18
+        '
+        'agetxt
+        '
+        Me.agetxt.Location = New System.Drawing.Point(123, 137)
+        Me.agetxt.Name = "agetxt"
+        Me.agetxt.Size = New System.Drawing.Size(146, 20)
+        Me.agetxt.TabIndex = 19
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(12, 137)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(60, 13)
+        Me.Label9.TabIndex = 20
+        Me.Label9.Text = "Age Rating"
+        '
+        'releaseDatepk
+        '
+        Me.releaseDatepk.Location = New System.Drawing.Point(358, 153)
+        Me.releaseDatepk.Name = "releaseDatepk"
+        Me.releaseDatepk.Size = New System.Drawing.Size(200, 20)
+        Me.releaseDatepk.TabIndex = 21
+        '
+        'releaseDatetxt
+        '
+        Me.releaseDatetxt.Location = New System.Drawing.Point(49, 203)
+        Me.releaseDatetxt.Mask = "00/00/0000"
+        Me.releaseDatetxt.Name = "releaseDatetxt"
+        Me.releaseDatetxt.Size = New System.Drawing.Size(100, 20)
+        Me.releaseDatetxt.TabIndex = 22
+        Me.releaseDatetxt.ValidatingType = GetType(Date)
         '
         'invInfo
         '
@@ -220,15 +256,19 @@ Partial Class invInfo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.ClientSize = New System.Drawing.Size(805, 321)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.releaseDatetxt)
+        Me.Controls.Add(Me.releaseDatepk)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.agetxt)
+        Me.Controls.Add(Me.UPCtxt)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.statustxt)
+        Me.Controls.Add(Me.directortxt)
+        Me.Controls.Add(Me.actorstxt)
+        Me.Controls.Add(Me.languagetxt)
+        Me.Controls.Add(Me.genretxt)
+        Me.Controls.Add(Me.datetxt)
+        Me.Controls.Add(Me.title)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -255,13 +295,17 @@ Partial Class invInfo
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents title As System.Windows.Forms.TextBox
+    Friend WithEvents datetxt As System.Windows.Forms.TextBox
+    Friend WithEvents genretxt As System.Windows.Forms.TextBox
+    Friend WithEvents languagetxt As System.Windows.Forms.TextBox
+    Friend WithEvents actorstxt As System.Windows.Forms.TextBox
+    Friend WithEvents directortxt As System.Windows.Forms.TextBox
+    Friend WithEvents statustxt As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents UPCtxt As System.Windows.Forms.TextBox
+    Friend WithEvents agetxt As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents releaseDatepk As System.Windows.Forms.DateTimePicker
+    Friend WithEvents releaseDatetxt As System.Windows.Forms.MaskedTextBox
 End Class

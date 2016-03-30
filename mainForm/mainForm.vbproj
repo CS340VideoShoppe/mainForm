@@ -61,6 +61,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.8\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -95,6 +99,7 @@
     <Compile Include="customerAdd.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dbControler.vb" />
     <Compile Include="DVD.vb" />
     <Compile Include="EmailAddress.vb" />
     <Compile Include="Employee.vb" />
@@ -181,6 +186,12 @@
       <DependentUpon>memberID.vb</DependentUpon>
     </Compile>
     <Compile Include="memberID.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memberSummary.Designer.vb">
+      <DependentUpon>memberSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memberSummary.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="memConfirm.designer.vb">
@@ -362,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="memberID.resx">
       <DependentUpon>memberID.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberSummary.resx">
+      <DependentUpon>memberSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="memConfirm.resx">
       <DependentUpon>memConfirm.vb</DependentUpon>
