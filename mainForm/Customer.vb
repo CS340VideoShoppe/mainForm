@@ -13,6 +13,14 @@
     Private Property lateFees As String
     Private Property requestedItems As DVD
 
+    Public Sub New(memberID As String, name As String, phones As String, emailAddress As String)
+        Me.memberID = memberID
+        Me.name = name
+        Me.phones = phones
+        Me.emailAddress = emailAddress
+
+    End Sub
+
     Public Sub New(memberID As String, name As String, phones As String,
                    address As address, creditCards As creditCard, emailAddress As String)
 
@@ -22,7 +30,7 @@
         Me.address = address
         Me.creditCards = creditCards
         Me.emailAddress = emailAddress
-       
+
 
     End Sub
 
@@ -45,7 +53,7 @@
     End Function
 
     Public Function getName() As String
-        Return Me.Name
+        Return Me.name
 
     End Function
 

@@ -9,10 +9,13 @@
     Private Property director As String
     Private Property actors As String
     Private Property status As String
+    Private Property rentCount As Integer
+    Private Property onHand As Integer
+
 
 
     Public Sub New(UPC As String, title As String, status As String, genre As String, language As String,
-                   ageRating As String, releaseDate As Date, director As String, actors As String)
+                   ageRating As String, releaseDate As Date, director As String, actors As String, rentCount As Integer, onHand As Integer)
         Me.UPC = UPC
         Me.title = title
         Me.status = status
@@ -22,6 +25,9 @@
         Me.releaseDate = releaseDate
         Me.director = director
         Me.actors = actors
+        Me.rentCount = rentCount
+        Me.onHand = onHand
+
 
     End Sub
 
@@ -60,12 +66,36 @@
     End Function
 
     Public Function getReleaseDate() As Date
+
         Return Me.releaseDate
 
     End Function
 
     Public Function getLanguage() As String
         Return Me.language
+
+    End Function
+
+    Public Function getActors() As String
+        Return Me.actors
+    End Function
+
+    Public Function getDirector() As String
+        Return Me.director
+
+    End Function
+
+    Public Function getAgeRating() As String
+        Return Me.ageRating
+    End Function
+
+    Public Function getRentCount() As Integer
+        Return Me.rentCount
+
+    End Function
+
+    Public Function getOnHand() As Integer
+        Return Me.onHand
 
     End Function
 

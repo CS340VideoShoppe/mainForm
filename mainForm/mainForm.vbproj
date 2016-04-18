@@ -70,6 +70,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -182,6 +183,12 @@
     <Compile Include="alertResults.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="invBreakDown.Designer.vb">
+      <DependentUpon>invBreakDown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="invBreakDown.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="memberID.Designer.vb">
       <DependentUpon>memberID.vb</DependentUpon>
     </Compile>
@@ -280,6 +287,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Schedule.vb" />
+    <Compile Include="transReturn.Designer.vb">
+      <DependentUpon>transReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="transReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="upc.Designer.vb">
       <DependentUpon>upc.vb</DependentUpon>
     </Compile>
@@ -325,6 +338,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="user.vb" />
     <Compile Include="WaitingList.vb" />
     <Compile Include="WaitingListAlert.vb" />
   </ItemGroup>
@@ -371,6 +385,9 @@
     <EmbeddedResource Include="alertResults.resx">
       <DependentUpon>alertResults.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="invBreakDown.resx">
+      <DependentUpon>invBreakDown.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="memberID.resx">
       <DependentUpon>memberID.vb</DependentUpon>
     </EmbeddedResource>
@@ -415,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="salesInfo.resx">
       <DependentUpon>salesInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transReturn.resx">
+      <DependentUpon>transReturn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="upc.resx">
       <DependentUpon>upc.vb</DependentUpon>

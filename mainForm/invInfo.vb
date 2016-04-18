@@ -1,20 +1,22 @@
-﻿Public Class invInfo
+﻿Imports System.Globalization
+
+Public Class invInfo
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+
+
+
         Dim d1 As DVD = New DVD(UPCtxt.Text, title.Text, statustxt.Text, genretxt.Text, languagetxt.Text, agetxt.Text,
-                                releaseDatetxt.Text, directortxt.Text, actorstxt.Text)
+                                releaseDatetxt.Text, directortxt.Text, actorstxt.Text, CInt(TextBox1.Text), CInt(TextBox2.Text))
 
         Dim db As dbControler = New dbControler
         db.connect()
 
         db.AddDvd(d1)
         db.addCategory(d1)
-
-
-
-
-
+        db.addDVD_Info(d1)
 
         Me.Hide()
 

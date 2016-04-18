@@ -30,7 +30,15 @@ Partial Class payment
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.pricetxt = New System.Windows.Forms.MaskedTextBox()
+        Me.titletxt = New System.Windows.Forms.TextBox()
+        Me.upctxt = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -74,7 +82,7 @@ Partial Class payment
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(548, 180)
+        Me.RadioButton3.Location = New System.Drawing.Point(444, 180)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(61, 22)
         Me.RadioButton3.TabIndex = 3
@@ -86,7 +94,7 @@ Partial Class payment
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(548, 139)
+        Me.RadioButton4.Location = New System.Drawing.Point(444, 152)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(69, 22)
         Me.RadioButton4.TabIndex = 4
@@ -96,7 +104,7 @@ Partial Class payment
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(31, 231)
+        Me.Button1.Location = New System.Drawing.Point(12, 277)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(144, 50)
         Me.Button1.TabIndex = 5
@@ -105,7 +113,7 @@ Partial Class payment
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(528, 231)
+        Me.Button2.Location = New System.Drawing.Point(746, 277)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(133, 50)
         Me.Button2.TabIndex = 6
@@ -115,28 +123,100 @@ Partial Class payment
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(247, 81)
+        Me.Label2.Location = New System.Drawing.Point(261, 226)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(111, 20)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Amound Due: "
         '
-        'MaskedTextBox1
+        'pricetxt
         '
-        Me.MaskedTextBox1.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(378, 75)
-        Me.MaskedTextBox1.Mask = "$00.00"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(81, 26)
-        Me.MaskedTextBox1.TabIndex = 8
+        Me.pricetxt.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.pricetxt.Location = New System.Drawing.Point(378, 75)
+        Me.pricetxt.Mask = "$00.00"
+        Me.pricetxt.Name = "pricetxt"
+        Me.pricetxt.Size = New System.Drawing.Size(81, 26)
+        Me.pricetxt.TabIndex = 8
         '
-        'Form6
+        'titletxt
+        '
+        Me.titletxt.Location = New System.Drawing.Point(656, 49)
+        Me.titletxt.Name = "titletxt"
+        Me.titletxt.Size = New System.Drawing.Size(160, 26)
+        Me.titletxt.TabIndex = 9
+        '
+        'upctxt
+        '
+        Me.upctxt.Location = New System.Drawing.Point(656, 17)
+        Me.upctxt.Name = "upctxt"
+        Me.upctxt.Size = New System.Drawing.Size(160, 26)
+        Me.upctxt.TabIndex = 10
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(726, 193)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 34)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Go"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(378, 223)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(125, 26)
+        Me.TextBox1.TabIndex = 12
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(378, 255)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(125, 26)
+        Me.TextBox2.TabIndex = 13
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(608, 23)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(42, 20)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "UPC"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(612, 55)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(38, 20)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Title"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(288, 258)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(46, 20)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Cash"
+        '
+        'payment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(740, 293)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.ClientSize = New System.Drawing.Size(891, 339)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.upctxt)
+        Me.Controls.Add(Me.titletxt)
+        Me.Controls.Add(Me.pricetxt)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -147,7 +227,7 @@ Partial Class payment
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "Form6"
+        Me.Name = "payment"
         Me.Text = "Sales Transactions"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -161,5 +241,13 @@ Partial Class payment
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents pricetxt As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents titletxt As System.Windows.Forms.TextBox
+    Friend WithEvents upctxt As System.Windows.Forms.TextBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class
