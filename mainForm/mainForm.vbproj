@@ -275,6 +275,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MonthlyReport.vb" />
+    <Compile Include="newCard.Designer.vb">
+      <DependentUpon>newCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OverdueAlert.vb" />
     <Compile Include="Phone.vb" />
     <Compile Include="Receipt.vb" />
@@ -429,6 +435,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newCard.resx">
+      <DependentUpon>newCard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="salesInfo.resx">
       <DependentUpon>salesInfo.vb</DependentUpon>

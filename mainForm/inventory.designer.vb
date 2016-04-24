@@ -50,7 +50,7 @@ Partial Class inventory
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(161, 62)
+        Me.Label1.Location = New System.Drawing.Point(212, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(88, 13)
         Me.Label1.TabIndex = 1
@@ -67,7 +67,7 @@ Partial Class inventory
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(264, 227)
+        Me.Button2.Location = New System.Drawing.Point(264, 181)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(137, 45)
         Me.Button2.TabIndex = 3
@@ -136,7 +136,7 @@ Partial Class inventory
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(450, 227)
+        Me.Button3.Location = New System.Drawing.Point(12, 59)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(137, 45)
         Me.Button3.TabIndex = 11
@@ -153,7 +153,7 @@ Partial Class inventory
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(543, 80)
+        Me.Button4.Location = New System.Drawing.Point(562, 115)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(99, 61)
         Me.Button4.TabIndex = 13
@@ -171,9 +171,9 @@ Partial Class inventory
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(615, 296)
+        Me.Button6.Location = New System.Drawing.Point(46, 295)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(81, 35)
+        Me.Button6.Size = New System.Drawing.Size(184, 56)
         Me.Button6.TabIndex = 15
         Me.Button6.Text = "Financial Reports"
         Me.Button6.UseVisualStyleBackColor = True

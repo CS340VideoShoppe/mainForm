@@ -42,6 +42,7 @@ Public Class titleInfo
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'Retreives dvd info from the datagrid and creates a new DVD class to be processed as a rental and stored in the database. 
         Dim title As String
         Dim releaseDate As Date
         Dim genre As String
@@ -67,13 +68,16 @@ Public Class titleInfo
         actors = Me.DataGridView1.Item(11, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
         director = Me.DataGridView1.Item(12, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
 
-        Dim d1 As DVD = New DVD(UPC, title, rentalStatus, genre, language, ageRating, releaseDate, director, actors, rentCount + 1, avl - 1)
+        If avl > 0 Then
+            Dim d1 As DVD = New DVD(UPC, title, rentalStatus, genre, language, ageRating, releaseDate, director, actors, rentCount + 1, avl - 1)
 
 
-        user.dvd = d1
+            user.dvd = d1
 
-        payment.Show()
-        Me.Close()
+            payment.Show()
+            Me.Close()
+        End If
+
 
 
     End Sub
@@ -129,6 +133,8 @@ Public Class titleInfo
             conn.Close()
             conn.Dispose()
         End Try
+        Button4.Enabled = True
+
 
 
     End Sub
@@ -137,7 +143,7 @@ Public Class titleInfo
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
         Dim title As String
         Dim releaseDate As Date
         Dim genre As String

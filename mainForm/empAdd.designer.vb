@@ -35,7 +35,6 @@ Partial Class empAdd
         Me.dobtxt = New System.Windows.Forms.TextBox()
         Me.sttxt = New System.Windows.Forms.TextBox()
         Me.citytxt = New System.Windows.Forms.TextBox()
-        Me.statetxt = New System.Windows.Forms.TextBox()
         Me.ziptxt = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -45,6 +44,7 @@ Partial Class empAdd
         Me.passwordtxt = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.first = New System.Windows.Forms.TextBox()
+        Me.statetxt = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -153,13 +153,6 @@ Partial Class empAdd
         Me.citytxt.Size = New System.Drawing.Size(148, 20)
         Me.citytxt.TabIndex = 13
         '
-        'statetxt
-        '
-        Me.statetxt.Location = New System.Drawing.Point(204, 262)
-        Me.statetxt.Name = "statetxt"
-        Me.statetxt.Size = New System.Drawing.Size(148, 20)
-        Me.statetxt.TabIndex = 14
-        '
         'ziptxt
         '
         Me.ziptxt.Location = New System.Drawing.Point(204, 288)
@@ -235,6 +228,15 @@ Partial Class empAdd
         Me.first.Size = New System.Drawing.Size(129, 20)
         Me.first.TabIndex = 22
         '
+        'statetxt
+        '
+        Me.statetxt.FormattingEnabled = True
+        Me.statetxt.Items.AddRange(New Object() {"SC", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"})
+        Me.statetxt.Location = New System.Drawing.Point(204, 262)
+        Me.statetxt.Name = "statetxt"
+        Me.statetxt.Size = New System.Drawing.Size(148, 21)
+        Me.statetxt.TabIndex = 23
+        '
         'empAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -242,6 +244,7 @@ Partial Class empAdd
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(596, 326)
+        Me.Controls.Add(Me.statetxt)
         Me.Controls.Add(Me.first)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.passwordtxt)
@@ -250,7 +253,6 @@ Partial Class empAdd
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.phonetxt)
         Me.Controls.Add(Me.ziptxt)
-        Me.Controls.Add(Me.statetxt)
         Me.Controls.Add(Me.citytxt)
         Me.Controls.Add(Me.sttxt)
         Me.Controls.Add(Me.dobtxt)
@@ -282,7 +284,6 @@ Partial Class empAdd
     Friend WithEvents dobtxt As System.Windows.Forms.TextBox
     Friend WithEvents sttxt As System.Windows.Forms.TextBox
     Friend WithEvents citytxt As System.Windows.Forms.TextBox
-    Friend WithEvents statetxt As System.Windows.Forms.TextBox
     Friend WithEvents ziptxt As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
@@ -292,4 +293,5 @@ Partial Class empAdd
     Friend WithEvents passwordtxt As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents first As System.Windows.Forms.TextBox
+    Friend WithEvents statetxt As System.Windows.Forms.ComboBox
 End Class

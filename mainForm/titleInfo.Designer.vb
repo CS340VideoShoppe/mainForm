@@ -35,7 +35,6 @@ Partial Class titleInfo
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,7 +69,8 @@ Partial Class titleInfo
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(742, 244)
+        Me.Button4.Enabled = False
+        Me.Button4.Location = New System.Drawing.Point(707, 244)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(94, 48)
         Me.Button4.TabIndex = 17
@@ -155,19 +155,10 @@ Partial Class titleInfo
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(670, 88)
+        Me.DataGridView1.Location = New System.Drawing.Point(607, 37)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(303, 201)
         Me.DataGridView1.TabIndex = 26
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(396, 287)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(89, 48)
-        Me.Button6.TabIndex = 27
-        Me.Button6.Text = "New Return"
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'titleInfo
         '
@@ -175,7 +166,6 @@ Partial Class titleInfo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.ClientSize = New System.Drawing.Size(993, 347)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.languagechk)
@@ -211,5 +201,4 @@ Partial Class titleInfo
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class

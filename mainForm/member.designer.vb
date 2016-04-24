@@ -175,6 +175,7 @@ Partial Class member
         Me.Button5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.Enabled = False
         Me.Button5.Location = New System.Drawing.Point(762, 286)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(98, 58)

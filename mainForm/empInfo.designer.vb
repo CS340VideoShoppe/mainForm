@@ -142,7 +142,7 @@ Partial Class empInfo
         '
         'ziptxt
         '
-        Me.ziptxt.Location = New System.Drawing.Point(153, 259)
+        Me.ziptxt.Location = New System.Drawing.Point(153, 256)
         Me.ziptxt.Name = "ziptxt"
         Me.ziptxt.Size = New System.Drawing.Size(127, 20)
         Me.ziptxt.TabIndex = 12
@@ -177,7 +177,7 @@ Partial Class empInfo
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(114, 259)
+        Me.Label10.Location = New System.Drawing.Point(114, 256)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(22, 13)
         Me.Label10.TabIndex = 16

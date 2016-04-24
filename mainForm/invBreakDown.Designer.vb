@@ -23,7 +23,6 @@ Partial Class invBreakDown
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.releaseDatetxt = New System.Windows.Forms.MaskedTextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.agetxt = New System.Windows.Forms.TextBox()
         Me.UPCtxt = New System.Windows.Forms.TextBox()
@@ -43,6 +42,9 @@ Partial Class invBreakDown
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.onHand = New System.Windows.Forms.TextBox()
+        Me.releaseDatetxt = New System.Windows.Forms.TextBox()
+        Me.rentCount = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button4
@@ -53,16 +55,6 @@ Partial Class invBreakDown
         Me.Button4.TabIndex = 45
         Me.Button4.Text = "Update Existing Item"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'releaseDatetxt
-        '
-        Me.releaseDatetxt.BackColor = System.Drawing.SystemColors.Menu
-        Me.releaseDatetxt.Location = New System.Drawing.Point(161, 47)
-        Me.releaseDatetxt.Mask = "00/00/0000"
-        Me.releaseDatetxt.Name = "releaseDatetxt"
-        Me.releaseDatetxt.Size = New System.Drawing.Size(146, 20)
-        Me.releaseDatetxt.TabIndex = 44
-        Me.releaseDatetxt.ValidatingType = GetType(Date)
         '
         'Label9
         '
@@ -93,7 +85,7 @@ Partial Class invBreakDown
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(595, 51)
+        Me.Label8.Location = New System.Drawing.Point(663, 54)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(40, 18)
         Me.Label8.TabIndex = 40
@@ -235,14 +227,37 @@ Partial Class invBreakDown
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Title"
         '
+        'onHand
+        '
+        Me.onHand.Location = New System.Drawing.Point(692, 101)
+        Me.onHand.Name = "onHand"
+        Me.onHand.Size = New System.Drawing.Size(155, 20)
+        Me.onHand.TabIndex = 46
+        '
+        'releaseDatetxt
+        '
+        Me.releaseDatetxt.Location = New System.Drawing.Point(161, 52)
+        Me.releaseDatetxt.Name = "releaseDatetxt"
+        Me.releaseDatetxt.Size = New System.Drawing.Size(146, 20)
+        Me.releaseDatetxt.TabIndex = 47
+        '
+        'rentCount
+        '
+        Me.rentCount.Location = New System.Drawing.Point(702, 164)
+        Me.rentCount.Name = "rentCount"
+        Me.rentCount.Size = New System.Drawing.Size(105, 20)
+        Me.rentCount.TabIndex = 48
+        '
         'invBreakDown
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(880, 306)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.rentCount)
         Me.Controls.Add(Me.releaseDatetxt)
+        Me.Controls.Add(Me.onHand)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.agetxt)
         Me.Controls.Add(Me.UPCtxt)
@@ -269,7 +284,6 @@ Partial Class invBreakDown
 
     End Sub
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents releaseDatetxt As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents agetxt As System.Windows.Forms.TextBox
     Friend WithEvents UPCtxt As System.Windows.Forms.TextBox
@@ -289,4 +303,7 @@ Partial Class invBreakDown
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents onHand As System.Windows.Forms.TextBox
+    Friend WithEvents releaseDatetxt As System.Windows.Forms.TextBox
+    Friend WithEvents rentCount As System.Windows.Forms.TextBox
 End Class

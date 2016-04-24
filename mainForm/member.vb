@@ -39,7 +39,7 @@ Public Class member
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        SQL = "SELECT * FROM MEMBERS Inner JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Inner JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID AND MEMBERS.NAME = '" & nameSearch.Text & "'"
+        SQL = "SELECT distinct members.memberID, members.name, members.phone, members.emailAddress, memberaddress.street, memberaddress.city, memberaddress.state, memberaddress.zipCode, creditcard.number, creditcard.expirationDate FROM MEMBERS LEFT JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Left JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID WHERE MEMBERS.NAME LIKE '%" & nameSearch.Text & "%' OR MEMBERS.PHONE = '" & phoneSearch.Text & "' "
        
         connect()
 
@@ -57,6 +57,8 @@ Public Class member
 
             DataGridView1.DataSource = MembersData
 
+            results()
+
 
         Catch ex As Exception
             MessageBox.Show("Cannot connect to database: ")
@@ -64,6 +66,8 @@ Public Class member
             conn.Close()
             conn.Dispose()
         End Try
+
+        Button5.Enabled = True
 
 
     End Sub
@@ -81,9 +85,11 @@ Public Class member
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'Method to display all members to the datagrid
+
         connect()
 
-        SQL = "SELECT * FROM MEMBERS LEFT JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Left JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID"
+        SQL = "SELECT distinct members.memberID, members.name, members.phone, members.emailAddress, memberaddress.street, memberaddress.city, memberaddress.state, memberaddress.zipCode, creditcard.number, creditcard.expirationDate FROM MEMBERS LEFT JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Left JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID"
 
         Dim c As dbControler = New dbControler
 
@@ -110,6 +116,7 @@ Public Class member
             conn.Close()
             conn.Dispose()
         End Try
+        Button5.Enabled = True
 
     End Sub
 
@@ -131,12 +138,12 @@ Public Class member
         name = Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
         phone = Me.DataGridView1.Item(2, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
         email = Me.DataGridView1.Item(3, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        street = Me.DataGridView1.Item(5, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        city = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        state = Me.DataGridView1.Item(7, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        zip = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        card = Me.DataGridView1.Item(10, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        expDate = Me.DataGridView1.Item(11, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+        street = Me.DataGridView1.Item(4, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+        city = Me.DataGridView1.Item(5, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+        state = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+        zip = Me.DataGridView1.Item(7, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+        card = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+        expDate = Me.DataGridView1.Item(9, Me.DataGridView1.CurrentCell.RowIndex).Value
         'rentals
         ' rentID = Me.DataGridView1.Item(13, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
         ' upc = Me.DataGridView1.Item(14, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
@@ -169,5 +176,14 @@ Public Class member
 
 
 
+    End Sub
+
+    Public Sub results()
+        'Finish search results
+        If String.IsNullOrEmpty(Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Then
+            MessageBox.Show("No results found")
+            DataGridView1.Rows.Clear()
+
+        End If
     End Sub
 End Class

@@ -30,7 +30,6 @@ Partial Class invInfo
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.title = New System.Windows.Forms.TextBox()
         Me.genretxt = New System.Windows.Forms.TextBox()
@@ -42,9 +41,9 @@ Partial Class invInfo
         Me.UPCtxt = New System.Windows.Forms.TextBox()
         Me.agetxt = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.releaseDatetxt = New System.Windows.Forms.MaskedTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.onHand = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.releaseDatetxt = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -119,21 +118,12 @@ Partial Class invInfo
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(318, 217)
+        Me.Button1.Location = New System.Drawing.Point(358, 266)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 43)
         Me.Button1.TabIndex = 7
         Me.Button1.Text = "Add New Item"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(408, 266)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(114, 43)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Delete Title"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -227,29 +217,28 @@ Partial Class invInfo
         Me.Label9.TabIndex = 20
         Me.Label9.Text = "Age Rating"
         '
+        'onHand
+        '
+        Me.onHand.Location = New System.Drawing.Point(374, 137)
+        Me.onHand.Name = "onHand"
+        Me.onHand.Size = New System.Drawing.Size(168, 20)
+        Me.onHand.TabIndex = 24
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(297, 144)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(50, 13)
+        Me.Label10.TabIndex = 25
+        Me.Label10.Text = "On Hand"
+        '
         'releaseDatetxt
         '
-        Me.releaseDatetxt.BackColor = System.Drawing.SystemColors.Menu
-        Me.releaseDatetxt.Location = New System.Drawing.Point(123, 56)
-        Me.releaseDatetxt.Mask = "00/00/0000"
+        Me.releaseDatetxt.Location = New System.Drawing.Point(123, 60)
         Me.releaseDatetxt.Name = "releaseDatetxt"
         Me.releaseDatetxt.Size = New System.Drawing.Size(146, 20)
-        Me.releaseDatetxt.TabIndex = 22
-        Me.releaseDatetxt.ValidatingType = GetType(Date)
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(507, 145)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 23
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(507, 171)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 24
+        Me.releaseDatetxt.TabIndex = 26
         '
         'invInfo
         '
@@ -257,9 +246,9 @@ Partial Class invInfo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.ClientSize = New System.Drawing.Size(805, 321)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.releaseDatetxt)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.onHand)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.agetxt)
         Me.Controls.Add(Me.UPCtxt)
@@ -271,7 +260,6 @@ Partial Class invInfo
         Me.Controls.Add(Me.genretxt)
         Me.Controls.Add(Me.title)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -294,7 +282,6 @@ Partial Class invInfo
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents title As System.Windows.Forms.TextBox
     Friend WithEvents genretxt As System.Windows.Forms.TextBox
@@ -306,7 +293,7 @@ Partial Class invInfo
     Friend WithEvents UPCtxt As System.Windows.Forms.TextBox
     Friend WithEvents agetxt As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents releaseDatetxt As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents onHand As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents releaseDatetxt As System.Windows.Forms.TextBox
 End Class

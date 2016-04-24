@@ -3,12 +3,12 @@
     Private Property cardNumber As String
     Private Property id As String
     Private Property address As address
-    Private Property expDate As String
+    Private Property expDate As Date
     Private Property name As String
     Private Property secCode As String
     Private Property bank As String
 
-    Public Sub New(id As String, cardNumber As String, expDate As String)
+    Public Sub New(id As String, cardNumber As String, expDate As Date)
         Me.id = id
         Me.cardNumber = cardNumber
         Me.expDate = expDate
@@ -32,7 +32,8 @@
         Return Me.cardNumber
     End Function
 
-    Public Function getExpDate()
+    Public Function getExpDate() As Date
+
         Return Me.expDate
     End Function
 
