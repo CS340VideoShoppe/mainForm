@@ -23,7 +23,7 @@ Partial Class memConfirm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.yeschk = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -39,16 +39,16 @@ Partial Class memConfirm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Are You Sure You Want To Change Member Information?"
         '
-        'RadioButton1
+        'yeschk
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(125, 105)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(43, 17)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Yes"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.yeschk.AutoSize = True
+        Me.yeschk.Location = New System.Drawing.Point(125, 105)
+        Me.yeschk.Name = "yeschk"
+        Me.yeschk.Size = New System.Drawing.Size(43, 17)
+        Me.yeschk.TabIndex = 1
+        Me.yeschk.TabStop = True
+        Me.yeschk.Text = "Yes"
+        Me.yeschk.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
@@ -88,7 +88,7 @@ Partial Class memConfirm
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.yeschk)
         Me.Controls.Add(Me.Label1)
         Me.Name = "memConfirm"
         Me.Text = "Member Manager"
@@ -97,7 +97,7 @@ Partial Class memConfirm
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents yeschk As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button

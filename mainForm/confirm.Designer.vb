@@ -23,16 +23,12 @@ Partial Class confirm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -51,26 +47,6 @@ Partial Class confirm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Name"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(33, 129)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Address"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(33, 176)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 18)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Phone Number"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -85,7 +61,7 @@ Partial Class confirm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(348, 132)
+        Me.Label5.Location = New System.Drawing.Point(33, 116)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 18)
         Me.Label5.TabIndex = 4
@@ -95,7 +71,7 @@ Partial Class confirm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(348, 179)
+        Me.Label6.Location = New System.Drawing.Point(348, 117)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 18)
         Me.Label6.TabIndex = 5
@@ -105,7 +81,7 @@ Partial Class confirm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(179, 235)
+        Me.Label7.Location = New System.Drawing.Point(210, 163)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(67, 18)
         Me.Label7.TabIndex = 6
@@ -130,28 +106,10 @@ Partial Class confirm
         Me.TextBox1.TabIndex = 8
         Me.TextBox1.Text = "John Doe"
         '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox2.Location = New System.Drawing.Point(154, 130)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(132, 20)
-        Me.TextBox2.TabIndex = 9
-        Me.TextBox2.Text = "1234 Evergreen Terrace"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox3.Location = New System.Drawing.Point(155, 177)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox3.TabIndex = 10
-        Me.TextBox3.Text = "555-555-5555"
-        '
         'TextBox4
         '
         Me.TextBox4.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox4.Location = New System.Drawing.Point(286, 235)
+        Me.TextBox4.Location = New System.Drawing.Point(272, 164)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(132, 20)
         Me.TextBox4.TabIndex = 11
@@ -160,7 +118,7 @@ Partial Class confirm
         'TextBox5
         '
         Me.TextBox5.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox5.Location = New System.Drawing.Point(433, 180)
+        Me.TextBox5.Location = New System.Drawing.Point(433, 117)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(122, 20)
         Me.TextBox5.TabIndex = 12
@@ -169,7 +127,7 @@ Partial Class confirm
         'TextBox6
         '
         Me.TextBox6.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox6.Location = New System.Drawing.Point(433, 133)
+        Me.TextBox6.Location = New System.Drawing.Point(155, 117)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(122, 20)
         Me.TextBox6.TabIndex = 13
@@ -202,7 +160,7 @@ Partial Class confirm
         Me.Button2.Text = "Back"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Form7
+        'confirm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -214,34 +172,26 @@ Partial Class confirm
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form7"
+        Me.Name = "confirm"
         Me.Text = "Sales Transactions"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox

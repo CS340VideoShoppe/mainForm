@@ -24,9 +24,6 @@ Partial Class customerAdd
     Private Sub InitializeComponent()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.ID = New System.Windows.Forms.TextBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -39,11 +36,9 @@ Partial Class customerAdd
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.zip = New System.Windows.Forms.TextBox()
-        Me.state = New System.Windows.Forms.TextBox()
         Me.city = New System.Windows.Forms.TextBox()
         Me.streetNum = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.expDate = New System.Windows.Forms.MaskedTextBox()
         Me.creditNum = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -51,14 +46,10 @@ Partial Class customerAdd
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.memID = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.apt = New System.Windows.Forms.TextBox()
-        Me.country = New System.Windows.Forms.TextBox()
         Me.secCode = New System.Windows.Forms.TextBox()
         Me.Bank = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -67,8 +58,8 @@ Partial Class customerAdd
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.expDate = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label16
@@ -86,38 +77,6 @@ Partial Class customerAdd
         Me.ID.Name = "ID"
         Me.ID.Size = New System.Drawing.Size(203, 20)
         Me.ID.TabIndex = 64
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(419, 282)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(39, 17)
-        Me.RadioButton2.TabIndex = 63
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "No"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(333, 282)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(43, 17)
-        Me.RadioButton1.TabIndex = 62
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Yes"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(330, 249)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(128, 18)
-        Me.Label15.TabIndex = 61
-        Me.Label15.Text = "Sign Up For Alerts"
         '
         'Button2
         '
@@ -213,17 +172,10 @@ Partial Class customerAdd
         '
         'zip
         '
-        Me.zip.Location = New System.Drawing.Point(93, 260)
+        Me.zip.Location = New System.Drawing.Point(93, 238)
         Me.zip.Name = "zip"
         Me.zip.Size = New System.Drawing.Size(152, 20)
         Me.zip.TabIndex = 47
-        '
-        'state
-        '
-        Me.state.Location = New System.Drawing.Point(93, 234)
-        Me.state.Name = "state"
-        Me.state.Size = New System.Drawing.Size(152, 20)
-        Me.state.TabIndex = 46
         '
         'city
         '
@@ -249,16 +201,6 @@ Partial Class customerAdd
         Me.Label9.Size = New System.Drawing.Size(121, 18)
         Me.Label9.TabIndex = 43
         Me.Label9.Text = "Experiration Date"
-        '
-        'expDate
-        '
-        Me.expDate.Location = New System.Drawing.Point(587, 208)
-        Me.expDate.Margin = New System.Windows.Forms.Padding(4)
-        Me.expDate.Mask = "00/00/0000"
-        Me.expDate.Name = "expDate"
-        Me.expDate.Size = New System.Drawing.Size(200, 20)
-        Me.expDate.TabIndex = 42
-        Me.expDate.ValidatingType = GetType(Date)
         '
         'creditNum
         '
@@ -335,13 +277,6 @@ Partial Class customerAdd
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Name"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(209, 131)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(209, 20)
-        Me.TextBox1.TabIndex = 66
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -362,16 +297,6 @@ Partial Class customerAdd
         Me.Label8.TabIndex = 68
         Me.Label8.Text = "Primary Phone"
         '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(80, 130)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(126, 18)
-        Me.Label17.TabIndex = 69
-        Me.Label17.Text = "Secondary Phone"
-        '
         'memID
         '
         Me.memID.Location = New System.Drawing.Point(209, 26)
@@ -387,20 +312,6 @@ Partial Class customerAdd
         Me.Button4.TabIndex = 72
         Me.Button4.Text = "Add Member"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'apt
-        '
-        Me.apt.Location = New System.Drawing.Point(93, 286)
-        Me.apt.Name = "apt"
-        Me.apt.Size = New System.Drawing.Size(152, 20)
-        Me.apt.TabIndex = 73
-        '
-        'country
-        '
-        Me.country.Location = New System.Drawing.Point(93, 312)
-        Me.country.Name = "country"
-        Me.country.Size = New System.Drawing.Size(152, 20)
-        Me.country.TabIndex = 74
         '
         'secCode
         '
@@ -470,23 +381,21 @@ Partial Class customerAdd
         Me.Label23.TabIndex = 82
         Me.Label23.Text = "State"
         '
-        'Label24
+        'ComboBox1
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(54, 289)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(33, 13)
-        Me.Label24.TabIndex = 83
-        Me.Label24.Text = "Apt #"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"SC", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"})
+        Me.ComboBox1.Location = New System.Drawing.Point(93, 265)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(152, 21)
+        Me.ComboBox1.TabIndex = 83
         '
-        'Label25
+        'expDate
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(49, 315)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(43, 13)
-        Me.Label25.TabIndex = 84
-        Me.Label25.Text = "Country"
+        Me.expDate.Location = New System.Drawing.Point(586, 209)
+        Me.expDate.Name = "expDate"
+        Me.expDate.Size = New System.Drawing.Size(201, 20)
+        Me.expDate.TabIndex = 84
         '
         'customerAdd
         '
@@ -494,8 +403,8 @@ Partial Class customerAdd
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ClientSize = New System.Drawing.Size(840, 453)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.expDate)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label21)
@@ -504,19 +413,12 @@ Partial Class customerAdd
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Bank)
         Me.Controls.Add(Me.secCode)
-        Me.Controls.Add(Me.country)
-        Me.Controls.Add(Me.apt)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.memID)
-        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.ID)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label14)
@@ -529,11 +431,9 @@ Partial Class customerAdd
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.zip)
-        Me.Controls.Add(Me.state)
         Me.Controls.Add(Me.city)
         Me.Controls.Add(Me.streetNum)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.expDate)
         Me.Controls.Add(Me.creditNum)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -549,9 +449,6 @@ Partial Class customerAdd
     End Sub
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents ID As System.Windows.Forms.TextBox
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label14 As System.Windows.Forms.Label
@@ -564,11 +461,9 @@ Partial Class customerAdd
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents zip As System.Windows.Forms.TextBox
-    Friend WithEvents state As System.Windows.Forms.TextBox
     Friend WithEvents city As System.Windows.Forms.TextBox
     Friend WithEvents streetNum As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents expDate As System.Windows.Forms.MaskedTextBox
     Friend WithEvents creditNum As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -576,14 +471,10 @@ Partial Class customerAdd
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents memID As System.Windows.Forms.TextBox
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents apt As System.Windows.Forms.TextBox
-    Friend WithEvents country As System.Windows.Forms.TextBox
     Friend WithEvents secCode As System.Windows.Forms.TextBox
     Friend WithEvents Bank As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
@@ -592,6 +483,6 @@ Partial Class customerAdd
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents expDate As System.Windows.Forms.TextBox
 End Class

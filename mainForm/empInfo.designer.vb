@@ -25,24 +25,25 @@ Partial Class empInfo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.nametxt = New System.Windows.Forms.TextBox()
+        Me.phonetxt = New System.Windows.Forms.TextBox()
+        Me.sttxt = New System.Windows.Forms.TextBox()
+        Me.ctytxt = New System.Windows.Forms.TextBox()
+        Me.statetxt = New System.Windows.Forms.TextBox()
+        Me.ziptxt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.dobtxt = New System.Windows.Forms.TextBox()
+        Me.hiretxt = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -75,16 +76,6 @@ Partial Class empInfo
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Address"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(316, 34)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(50, 18)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "E-mail"
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -107,54 +98,54 @@ Partial Class empInfo
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(444, 220)
+        Me.Button1.Location = New System.Drawing.Point(483, 270)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(127, 52)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Schedules"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'nametxt
         '
-        Me.TextBox1.Location = New System.Drawing.Point(153, 34)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.nametxt.Location = New System.Drawing.Point(153, 34)
+        Me.nametxt.Name = "nametxt"
+        Me.nametxt.Size = New System.Drawing.Size(127, 20)
+        Me.nametxt.TabIndex = 7
         '
-        'TextBox2
+        'phonetxt
         '
-        Me.TextBox2.Location = New System.Drawing.Point(153, 88)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.phonetxt.Location = New System.Drawing.Point(153, 88)
+        Me.phonetxt.Name = "phonetxt"
+        Me.phonetxt.Size = New System.Drawing.Size(127, 20)
+        Me.phonetxt.TabIndex = 8
         '
-        'TextBox3
+        'sttxt
         '
-        Me.TextBox3.Location = New System.Drawing.Point(153, 151)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.sttxt.Location = New System.Drawing.Point(153, 151)
+        Me.sttxt.Name = "sttxt"
+        Me.sttxt.Size = New System.Drawing.Size(127, 20)
+        Me.sttxt.TabIndex = 9
         '
-        'TextBox4
+        'ctytxt
         '
-        Me.TextBox4.Location = New System.Drawing.Point(153, 189)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox4.TabIndex = 10
+        Me.ctytxt.Location = New System.Drawing.Point(153, 189)
+        Me.ctytxt.Name = "ctytxt"
+        Me.ctytxt.Size = New System.Drawing.Size(127, 20)
+        Me.ctytxt.TabIndex = 10
         '
-        'TextBox5
+        'statetxt
         '
-        Me.TextBox5.Location = New System.Drawing.Point(153, 220)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox5.TabIndex = 11
+        Me.statetxt.Location = New System.Drawing.Point(153, 220)
+        Me.statetxt.Name = "statetxt"
+        Me.statetxt.Size = New System.Drawing.Size(127, 20)
+        Me.statetxt.TabIndex = 11
         '
-        'TextBox6
+        'ziptxt
         '
-        Me.TextBox6.Location = New System.Drawing.Point(153, 259)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox6.TabIndex = 12
+        Me.ziptxt.Location = New System.Drawing.Point(153, 256)
+        Me.ziptxt.Name = "ziptxt"
+        Me.ziptxt.Size = New System.Drawing.Size(127, 20)
+        Me.ziptxt.TabIndex = 12
         '
         'Label7
         '
@@ -186,71 +177,84 @@ Partial Class empInfo
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(114, 259)
+        Me.Label10.Location = New System.Drawing.Point(114, 256)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(22, 13)
         Me.Label10.TabIndex = 16
         Me.Label10.Text = "Zip"
         '
-        'TextBox7
+        'dobtxt
         '
-        Me.TextBox7.Location = New System.Drawing.Point(420, 34)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox7.TabIndex = 17
+        Me.dobtxt.Location = New System.Drawing.Point(420, 85)
+        Me.dobtxt.Name = "dobtxt"
+        Me.dobtxt.Size = New System.Drawing.Size(140, 20)
+        Me.dobtxt.TabIndex = 18
         '
-        'TextBox8
+        'hiretxt
         '
-        Me.TextBox8.Location = New System.Drawing.Point(420, 85)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox8.TabIndex = 18
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(420, 135)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox9.TabIndex = 19
+        Me.hiretxt.Location = New System.Drawing.Point(420, 135)
+        Me.hiretxt.Name = "hiretxt"
+        Me.hiretxt.Size = New System.Drawing.Size(140, 20)
+        Me.hiretxt.TabIndex = 19
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(311, 220)
+        Me.Button2.Location = New System.Drawing.Point(9, 275)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(127, 52)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "Back"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(311, 270)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(114, 40)
+        Me.Button3.TabIndex = 21
+        Me.Button3.Text = "Update"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Highlight
+        Me.DataGridView1.Location = New System.Drawing.Point(616, 12)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(426, 310)
+        Me.DataGridView1.TabIndex = 22
+        '
         'empInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(583, 303)
+        Me.ClientSize = New System.Drawing.Size(1054, 334)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.hiretxt)
+        Me.Controls.Add(Me.dobtxt)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ziptxt)
+        Me.Controls.Add(Me.statetxt)
+        Me.Controls.Add(Me.ctytxt)
+        Me.Controls.Add(Me.sttxt)
+        Me.Controls.Add(Me.phonetxt)
+        Me.Controls.Add(Me.nametxt)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "empInfo"
         Me.Text = "Member Manager"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -258,22 +262,22 @@ Partial Class empInfo
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents nametxt As System.Windows.Forms.TextBox
+    Friend WithEvents phonetxt As System.Windows.Forms.TextBox
+    Friend WithEvents sttxt As System.Windows.Forms.TextBox
+    Friend WithEvents ctytxt As System.Windows.Forms.TextBox
+    Friend WithEvents statetxt As System.Windows.Forms.TextBox
+    Friend WithEvents ziptxt As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents dobtxt As System.Windows.Forms.TextBox
+    Friend WithEvents hiretxt As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

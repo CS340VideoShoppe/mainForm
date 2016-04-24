@@ -8,6 +8,15 @@
     Private Property aptNumber As String
     Private Property country As String
 
+    Public Sub New(memID As String, street As String, city As String, state As String, zip As String)
+        Me.memID = memID
+        Me.street = street
+        Me.city = city
+        Me.state = state
+        Me.zip = zip
+    End Sub
+
+
     Public Sub New(memID As String, street As String, city As String, state As String, zip As String, aptNum As String, country As String)
         Me.memID = memID
         Me.street = street
@@ -37,6 +46,20 @@
 
     End Function
 
+    Public Function getCity() As String
+        Return Me.city
+
+    End Function
+
+    Public Function getState() As String
+        Return Me.state
+
+    End Function
+
+    Public Function getzip() As String
+        Return Me.zip
+
+    End Function
 
 
 

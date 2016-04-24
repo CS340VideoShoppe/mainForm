@@ -22,89 +22,21 @@ Partial Class titleInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.languagechk = New System.Windows.Forms.CheckBox()
+        Me.actorChk = New System.Windows.Forms.CheckBox()
+        Me.directorChk = New System.Windows.Forms.CheckBox()
+        Me.genreChk = New System.Windows.Forms.CheckBox()
+        Me.titlechk = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Location = New System.Drawing.Point(58, 50)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Title:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(58, 104)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Release Date"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(514, 50)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 18)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Genre"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(512, 110)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 18)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Status"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(202, 50)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(230, 24)
-        Me.TextBox1.TabIndex = 8
-        Me.TextBox1.Text = "Citizen Kane"
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.BackColor = System.Drawing.SystemColors.Menu
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(202, 104)
-        Me.MaskedTextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaskedTextBox1.Mask = "00/00/0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(230, 24)
-        Me.MaskedTextBox1.TabIndex = 9
-        Me.MaskedTextBox1.ValidatingType = GetType(Date)
         '
         'Button1
         '
@@ -126,46 +58,9 @@ Partial Class titleInfo
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(60, 190)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(43, 18)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "UPC"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox2.Location = New System.Drawing.Point(594, 50)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(152, 24)
-        Me.TextBox2.TabIndex = 13
-        Me.TextBox2.Text = "Drama"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox3.Location = New System.Drawing.Point(594, 110)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(152, 24)
-        Me.TextBox3.TabIndex = 14
-        Me.TextBox3.Text = "Available"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.TextBox4.Location = New System.Drawing.Point(202, 187)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(230, 24)
-        Me.TextBox4.TabIndex = 15
-        Me.TextBox4.Text = "290053574431212"
-        '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(42, 264)
+        Me.Button3.Location = New System.Drawing.Point(11, 287)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(85, 48)
         Me.Button3.TabIndex = 16
@@ -174,53 +69,136 @@ Partial Class titleInfo
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(684, 264)
+        Me.Button4.Enabled = False
+        Me.Button4.Location = New System.Drawing.Point(707, 244)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(94, 48)
         Me.Button4.TabIndex = 17
-        Me.Button4.Text = "Next"
+        Me.Button4.Text = "New Rental"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'Form5
+        'languagechk
+        '
+        Me.languagechk.AutoSize = True
+        Me.languagechk.Location = New System.Drawing.Point(42, 188)
+        Me.languagechk.Name = "languagechk"
+        Me.languagechk.Size = New System.Drawing.Size(91, 22)
+        Me.languagechk.TabIndex = 24
+        Me.languagechk.Text = "Language"
+        Me.languagechk.UseVisualStyleBackColor = True
+        '
+        'actorChk
+        '
+        Me.actorChk.AutoSize = True
+        Me.actorChk.Location = New System.Drawing.Point(130, 155)
+        Me.actorChk.Name = "actorChk"
+        Me.actorChk.Size = New System.Drawing.Size(62, 22)
+        Me.actorChk.TabIndex = 23
+        Me.actorChk.Text = "Actor"
+        Me.actorChk.UseVisualStyleBackColor = True
+        '
+        'directorChk
+        '
+        Me.directorChk.AutoSize = True
+        Me.directorChk.Location = New System.Drawing.Point(130, 117)
+        Me.directorChk.Name = "directorChk"
+        Me.directorChk.Size = New System.Drawing.Size(80, 22)
+        Me.directorChk.TabIndex = 22
+        Me.directorChk.Text = "Director"
+        Me.directorChk.UseVisualStyleBackColor = True
+        '
+        'genreChk
+        '
+        Me.genreChk.AutoSize = True
+        Me.genreChk.Location = New System.Drawing.Point(42, 155)
+        Me.genreChk.Name = "genreChk"
+        Me.genreChk.Size = New System.Drawing.Size(68, 22)
+        Me.genreChk.TabIndex = 21
+        Me.genreChk.Text = "Genre"
+        Me.genreChk.UseVisualStyleBackColor = True
+        '
+        'titlechk
+        '
+        Me.titlechk.AutoSize = True
+        Me.titlechk.Location = New System.Drawing.Point(42, 117)
+        Me.titlechk.Name = "titlechk"
+        Me.titlechk.Size = New System.Drawing.Size(54, 22)
+        Me.titlechk.TabIndex = 20
+        Me.titlechk.Text = "Title"
+        Me.titlechk.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(39, 78)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(118, 18)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Search Inventory"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(163, 78)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(171, 24)
+        Me.TextBox1.TabIndex = 18
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(36, 216)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(228, 42)
+        Me.Button5.TabIndex = 25
+        Me.Button5.Text = "Search"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(607, 37)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(303, 201)
+        Me.DataGridView1.TabIndex = 26
+        '
+        'titleInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(826, 324)
+        Me.ClientSize = New System.Drawing.Size(993, 347)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.languagechk)
+        Me.Controls.Add(Me.actorChk)
+        Me.Controls.Add(Me.directorChk)
+        Me.Controls.Add(Me.genreChk)
+        Me.Controls.Add(Me.titlechk)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.MaskedTextBox1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Form5"
+        Me.Name = "titleInfo"
         Me.Text = "Sales Transaction"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents languagechk As System.Windows.Forms.CheckBox
+    Friend WithEvents actorChk As System.Windows.Forms.CheckBox
+    Friend WithEvents directorChk As System.Windows.Forms.CheckBox
+    Friend WithEvents genreChk As System.Windows.Forms.CheckBox
+    Friend WithEvents titlechk As System.Windows.Forms.CheckBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

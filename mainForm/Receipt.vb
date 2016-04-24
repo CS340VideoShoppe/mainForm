@@ -1,8 +1,6 @@
-﻿Public Class Receipt : Inherits Rental
+﻿Public Class Receipt
 
-    Public Sub New()
 
-    End Sub
 
     Public Sub sendReceipt()
 

@@ -22,6 +22,7 @@ Partial Class empAdd
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(empAdd))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -30,17 +31,20 @@ Partial Class empAdd
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.nametxt = New System.Windows.Forms.TextBox()
+        Me.dobtxt = New System.Windows.Forms.TextBox()
+        Me.sttxt = New System.Windows.Forms.TextBox()
+        Me.citytxt = New System.Windows.Forms.TextBox()
+        Me.ziptxt = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.phonetxt = New System.Windows.Forms.TextBox()
+        Me.passwordtxt = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.first = New System.Windows.Forms.TextBox()
+        Me.statetxt = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -121,64 +125,40 @@ Partial Class empAdd
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Zip"
         '
-        'Label9
+        'nametxt
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(320, 93)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(121, 18)
-        Me.Label9.TabIndex = 9
-        Me.Label9.Text = "Pay Rate(Hourly)"
+        Me.nametxt.Location = New System.Drawing.Point(117, 91)
+        Me.nametxt.Name = "nametxt"
+        Me.nametxt.Size = New System.Drawing.Size(148, 20)
+        Me.nametxt.TabIndex = 10
         '
-        'TextBox1
+        'dobtxt
         '
-        Me.TextBox1.Location = New System.Drawing.Point(117, 91)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(148, 20)
-        Me.TextBox1.TabIndex = 10
+        Me.dobtxt.Location = New System.Drawing.Point(117, 126)
+        Me.dobtxt.Name = "dobtxt"
+        Me.dobtxt.Size = New System.Drawing.Size(148, 20)
+        Me.dobtxt.TabIndex = 11
         '
-        'TextBox2
+        'sttxt
         '
-        Me.TextBox2.Location = New System.Drawing.Point(117, 126)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(148, 20)
-        Me.TextBox2.TabIndex = 11
+        Me.sttxt.Location = New System.Drawing.Point(204, 210)
+        Me.sttxt.Name = "sttxt"
+        Me.sttxt.Size = New System.Drawing.Size(148, 20)
+        Me.sttxt.TabIndex = 12
         '
-        'TextBox3
+        'citytxt
         '
-        Me.TextBox3.Location = New System.Drawing.Point(204, 210)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(148, 20)
-        Me.TextBox3.TabIndex = 12
+        Me.citytxt.Location = New System.Drawing.Point(204, 236)
+        Me.citytxt.Name = "citytxt"
+        Me.citytxt.Size = New System.Drawing.Size(148, 20)
+        Me.citytxt.TabIndex = 13
         '
-        'TextBox4
+        'ziptxt
         '
-        Me.TextBox4.Location = New System.Drawing.Point(204, 236)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(148, 20)
-        Me.TextBox4.TabIndex = 13
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(204, 262)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(148, 20)
-        Me.TextBox5.TabIndex = 14
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(204, 288)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(148, 20)
-        Me.TextBox6.TabIndex = 15
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(447, 91)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 16
+        Me.ziptxt.Location = New System.Drawing.Point(204, 288)
+        Me.ziptxt.Name = "ziptxt"
+        Me.ziptxt.Size = New System.Drawing.Size(148, 20)
+        Me.ziptxt.TabIndex = 15
         '
         'Label10
         '
@@ -208,22 +188,75 @@ Partial Class empAdd
         Me.Button2.Text = "Back"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(390, 93)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(51, 18)
+        Me.Label9.TabIndex = 9
+        Me.Label9.Text = "Phone"
+        '
+        'phonetxt
+        '
+        Me.phonetxt.Location = New System.Drawing.Point(447, 91)
+        Me.phonetxt.Name = "phonetxt"
+        Me.phonetxt.Size = New System.Drawing.Size(120, 20)
+        Me.phonetxt.TabIndex = 16
+        '
+        'passwordtxt
+        '
+        Me.passwordtxt.Location = New System.Drawing.Point(443, 184)
+        Me.passwordtxt.Name = "passwordtxt"
+        Me.passwordtxt.Size = New System.Drawing.Size(124, 20)
+        Me.passwordtxt.TabIndex = 20
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(384, 187)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(53, 13)
+        Me.Label11.TabIndex = 21
+        Me.Label11.Text = "Password"
+        '
+        'first
+        '
+        Me.first.Location = New System.Drawing.Point(117, 56)
+        Me.first.Name = "first"
+        Me.first.Size = New System.Drawing.Size(129, 20)
+        Me.first.TabIndex = 22
+        '
+        'statetxt
+        '
+        Me.statetxt.FormattingEnabled = True
+        Me.statetxt.Items.AddRange(New Object() {"SC", "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"})
+        Me.statetxt.Location = New System.Drawing.Point(204, 262)
+        Me.statetxt.Name = "statetxt"
+        Me.statetxt.Size = New System.Drawing.Size(148, 21)
+        Me.statetxt.TabIndex = 23
+        '
         'empAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(596, 326)
+        Me.Controls.Add(Me.statetxt)
+        Me.Controls.Add(Me.first)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.passwordtxt)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.phonetxt)
+        Me.Controls.Add(Me.ziptxt)
+        Me.Controls.Add(Me.citytxt)
+        Me.Controls.Add(Me.sttxt)
+        Me.Controls.Add(Me.dobtxt)
+        Me.Controls.Add(Me.nametxt)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label8)
@@ -247,15 +280,18 @@ Partial Class empAdd
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents nametxt As System.Windows.Forms.TextBox
+    Friend WithEvents dobtxt As System.Windows.Forms.TextBox
+    Friend WithEvents sttxt As System.Windows.Forms.TextBox
+    Friend WithEvents citytxt As System.Windows.Forms.TextBox
+    Friend WithEvents ziptxt As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents phonetxt As System.Windows.Forms.TextBox
+    Friend WithEvents passwordtxt As System.Windows.Forms.TextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents first As System.Windows.Forms.TextBox
+    Friend WithEvents statetxt As System.Windows.Forms.ComboBox
 End Class

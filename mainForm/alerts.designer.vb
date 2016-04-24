@@ -76,7 +76,6 @@ Partial Class alerts
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "alerts"
-        Me.Text = "Alerts Manager"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
