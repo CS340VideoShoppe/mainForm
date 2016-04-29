@@ -45,11 +45,15 @@ Partial Class invBreakDown
         Me.onHand = New System.Windows.Forms.TextBox()
         Me.releaseDatetxt = New System.Windows.Forms.TextBox()
         Me.rentCount = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(356, 193)
+        Me.Button4.Location = New System.Drawing.Point(355, 253)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(118, 44)
         Me.Button4.TabIndex = 45
@@ -59,16 +63,17 @@ Partial Class invBreakDown
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(50, 128)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(30, 143)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(60, 13)
+        Me.Label9.Size = New System.Drawing.Size(79, 18)
         Me.Label9.TabIndex = 43
         Me.Label9.Text = "Age Rating"
         '
         'agetxt
         '
         Me.agetxt.BackColor = System.Drawing.SystemColors.Menu
-        Me.agetxt.Location = New System.Drawing.Point(161, 128)
+        Me.agetxt.Location = New System.Drawing.Point(120, 141)
         Me.agetxt.Name = "agetxt"
         Me.agetxt.Size = New System.Drawing.Size(146, 20)
         Me.agetxt.TabIndex = 42
@@ -76,7 +81,7 @@ Partial Class invBreakDown
         'UPCtxt
         '
         Me.UPCtxt.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.UPCtxt.Location = New System.Drawing.Point(709, 52)
+        Me.UPCtxt.Location = New System.Drawing.Point(681, 62)
         Me.UPCtxt.Name = "UPCtxt"
         Me.UPCtxt.Size = New System.Drawing.Size(122, 20)
         Me.UPCtxt.TabIndex = 41
@@ -85,7 +90,7 @@ Partial Class invBreakDown
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(663, 54)
+        Me.Label8.Location = New System.Drawing.Point(635, 64)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(40, 18)
         Me.Label8.TabIndex = 40
@@ -94,7 +99,7 @@ Partial Class invBreakDown
         'statustxt
         '
         Me.statustxt.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.statustxt.Location = New System.Drawing.Point(709, 11)
+        Me.statustxt.Location = New System.Drawing.Point(681, 27)
         Me.statustxt.Name = "statustxt"
         Me.statustxt.Size = New System.Drawing.Size(122, 20)
         Me.statustxt.TabIndex = 39
@@ -102,7 +107,7 @@ Partial Class invBreakDown
         'directortxt
         '
         Me.directortxt.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.directortxt.Location = New System.Drawing.Point(412, 86)
+        Me.directortxt.Location = New System.Drawing.Point(375, 103)
         Me.directortxt.Name = "directortxt"
         Me.directortxt.Size = New System.Drawing.Size(168, 20)
         Me.directortxt.TabIndex = 38
@@ -110,7 +115,7 @@ Partial Class invBreakDown
         'actorstxt
         '
         Me.actorstxt.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.actorstxt.Location = New System.Drawing.Point(412, 49)
+        Me.actorstxt.Location = New System.Drawing.Point(375, 62)
         Me.actorstxt.Name = "actorstxt"
         Me.actorstxt.Size = New System.Drawing.Size(168, 20)
         Me.actorstxt.TabIndex = 37
@@ -118,7 +123,7 @@ Partial Class invBreakDown
         'languagetxt
         '
         Me.languagetxt.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.languagetxt.Location = New System.Drawing.Point(412, 10)
+        Me.languagetxt.Location = New System.Drawing.Point(375, 27)
         Me.languagetxt.Name = "languagetxt"
         Me.languagetxt.Size = New System.Drawing.Size(168, 20)
         Me.languagetxt.TabIndex = 36
@@ -126,7 +131,7 @@ Partial Class invBreakDown
         'genretxt
         '
         Me.genretxt.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.genretxt.Location = New System.Drawing.Point(161, 86)
+        Me.genretxt.Location = New System.Drawing.Point(120, 100)
         Me.genretxt.Name = "genretxt"
         Me.genretxt.Size = New System.Drawing.Size(146, 20)
         Me.genretxt.TabIndex = 35
@@ -134,14 +139,14 @@ Partial Class invBreakDown
         'title
         '
         Me.title.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.title.Location = New System.Drawing.Point(161, 7)
+        Me.title.Location = New System.Drawing.Point(120, 26)
         Me.title.Name = "title"
         Me.title.Size = New System.Drawing.Size(146, 20)
         Me.title.TabIndex = 34
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(255, 243)
+        Me.Button3.Location = New System.Drawing.Point(6, 302)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(114, 43)
         Me.Button3.TabIndex = 33
@@ -150,18 +155,20 @@ Partial Class invBreakDown
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(455, 243)
+        Me.Button2.BackColor = System.Drawing.Color.Red
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(355, 303)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(114, 43)
         Me.Button2.TabIndex = 32
         Me.Button2.Text = "Delete Title"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(595, 11)
+        Me.Label7.Location = New System.Drawing.Point(579, 28)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(96, 18)
         Me.Label7.TabIndex = 30
@@ -171,7 +178,7 @@ Partial Class invBreakDown
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(334, 90)
+        Me.Label6.Location = New System.Drawing.Point(308, 102)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(61, 18)
         Me.Label6.TabIndex = 29
@@ -181,7 +188,7 @@ Partial Class invBreakDown
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(334, 49)
+        Me.Label5.Location = New System.Drawing.Point(318, 64)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(51, 18)
         Me.Label5.TabIndex = 28
@@ -191,7 +198,7 @@ Partial Class invBreakDown
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(334, 10)
+        Me.Label4.Location = New System.Drawing.Point(297, 26)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 18)
         Me.Label4.TabIndex = 27
@@ -201,7 +208,7 @@ Partial Class invBreakDown
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(50, 90)
+        Me.Label3.Location = New System.Drawing.Point(60, 102)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 18)
         Me.Label3.TabIndex = 26
@@ -211,7 +218,7 @@ Partial Class invBreakDown
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(50, 49)
+        Me.Label2.Location = New System.Drawing.Point(17, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 18)
         Me.Label2.TabIndex = 25
@@ -221,7 +228,7 @@ Partial Class invBreakDown
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(50, 10)
+        Me.Label1.Location = New System.Drawing.Point(74, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 18)
         Me.Label1.TabIndex = 24
@@ -229,58 +236,92 @@ Partial Class invBreakDown
         '
         'onHand
         '
-        Me.onHand.Location = New System.Drawing.Point(692, 101)
+        Me.onHand.Location = New System.Drawing.Point(681, 100)
         Me.onHand.Name = "onHand"
-        Me.onHand.Size = New System.Drawing.Size(155, 20)
+        Me.onHand.Size = New System.Drawing.Size(122, 20)
         Me.onHand.TabIndex = 46
         '
         'releaseDatetxt
         '
-        Me.releaseDatetxt.Location = New System.Drawing.Point(161, 52)
+        Me.releaseDatetxt.Location = New System.Drawing.Point(120, 62)
         Me.releaseDatetxt.Name = "releaseDatetxt"
         Me.releaseDatetxt.Size = New System.Drawing.Size(146, 20)
         Me.releaseDatetxt.TabIndex = 47
         '
         'rentCount
         '
-        Me.rentCount.Location = New System.Drawing.Point(702, 164)
+        Me.rentCount.Location = New System.Drawing.Point(681, 141)
         Me.rentCount.Name = "rentCount"
-        Me.rentCount.Size = New System.Drawing.Size(105, 20)
+        Me.rentCount.Size = New System.Drawing.Size(122, 20)
         Me.rentCount.TabIndex = 48
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(608, 102)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(67, 18)
+        Me.Label10.TabIndex = 49
+        Me.Label10.Text = "On Hand"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(581, 143)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(94, 18)
+        Me.Label11.TabIndex = 50
+        Me.Label11.Text = "Rental Count"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.GroupBox1.Controls.Add(Me.title)
+        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.Button4)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.rentCount)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.releaseDatetxt)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.onHand)
+        Me.GroupBox1.Controls.Add(Me.genretxt)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.UPCtxt)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.agetxt)
+        Me.GroupBox1.Controls.Add(Me.statustxt)
+        Me.GroupBox1.Controls.Add(Me.languagetxt)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.directortxt)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.actorstxt)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Location = New System.Drawing.Point(95, 42)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(865, 352)
+        Me.GroupBox1.TabIndex = 51
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Title Info"
         '
         'invBreakDown
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(880, 306)
-        Me.Controls.Add(Me.rentCount)
-        Me.Controls.Add(Me.releaseDatetxt)
-        Me.Controls.Add(Me.onHand)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.agetxt)
-        Me.Controls.Add(Me.UPCtxt)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.statustxt)
-        Me.Controls.Add(Me.directortxt)
-        Me.Controls.Add(Me.actorstxt)
-        Me.Controls.Add(Me.languagetxt)
-        Me.Controls.Add(Me.genretxt)
-        Me.Controls.Add(Me.title)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ClientSize = New System.Drawing.Size(1064, 481)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "invBreakDown"
         Me.Text = "invBreakDown"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button4 As System.Windows.Forms.Button
@@ -306,4 +347,7 @@ Partial Class invBreakDown
     Friend WithEvents onHand As System.Windows.Forms.TextBox
     Friend WithEvents releaseDatetxt As System.Windows.Forms.TextBox
     Friend WithEvents rentCount As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

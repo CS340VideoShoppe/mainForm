@@ -6,6 +6,8 @@ Public Class invBreakDown
 
 
     Private Sub invBreakDown_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        centerButton()
+
         Dim d1 As DVD = user.dvd
 
         title.Text = d1.getTitle()
@@ -47,6 +49,7 @@ Public Class invBreakDown
             db.alterDVD(dvd)
             db.alterCategory(dvd)
             db.alterDVDInfo(dvd)
+            MessageBox.Show("Item Updated Successfully")
         Else
             MessageBox.Show("Cannot connect")
 
@@ -67,8 +70,8 @@ Public Class invBreakDown
 
             validInput = False
 
-        End If
-        If Not Regex.IsMatch(genretxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(genretxt.Text) Or Regex.IsMatch(genretxt.Text, "[0-9]") Then
+
+        ElseIf Not Regex.IsMatch(genretxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(genretxt.Text) Or Regex.IsMatch(genretxt.Text, "[0-9]") Then
             genretxt.Focus()
             genretxt.Clear()
 
@@ -76,54 +79,56 @@ Public Class invBreakDown
 
             validInput = False
 
-        End If
 
-        If Not Regex.Match(actorstxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(actorstxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
+
+        ElseIf Not Regex.Match(actorstxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(actorstxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid Actors")
 
-        End If
 
-        If Not Regex.Match(directortxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(directortxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
+
+        ElseIf Not Regex.Match(directortxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(directortxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid Director")
 
-        End If
 
-        If Not Regex.Match(languagetxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(languagetxt.Text) Or Regex.Match(languagetxt.Text, "[0-9]").Success Then
+
+        ElseIf Not Regex.Match(languagetxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(languagetxt.Text) Or Regex.Match(languagetxt.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid Language")
 
-        End If
 
-        If Not Regex.IsMatch(upc.Text, "[0-9 ]") Or String.IsNullOrEmpty(upc.Text) Or UPCtxt.Text.Length < 12 Then
+
+        ElseIf Not Regex.IsMatch(upc.Text, "[0-9 ]") Or String.IsNullOrEmpty(upc.Text) Or UPCtxt.Text.Length < 12 Then
             validInput = False
 
             MessageBox.Show("Invalid UPC")
 
-        End If
 
-        If String.IsNullOrEmpty(agetxt.Text) Or agetxt.Text.Length > 5 Then
+
+        ElseIf String.IsNullOrEmpty(agetxt.Text) Or agetxt.Text.Length > 5 Then
             validInput = False
 
             MessageBox.Show("Invalid Age Rating")
 
-        End If
 
-        If Not Regex.IsMatch(onHand.Text, "[0-9 ]") Or String.IsNullOrEmpty(onHand.Text) Or onHand.Text.Length < 0 Then
+
+        ElseIf Not Regex.IsMatch(onHand.Text, "[0-9 ]") Or String.IsNullOrEmpty(onHand.Text) Or onHand.Text.Length < 0 Then
             validInput = False
 
             MessageBox.Show("Invalid Number on Hand")
 
-        End If
 
-        If Not Regex.IsMatch(statustxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(statustxt.Text) Then
+        ElseIf Not Regex.IsMatch(statustxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(statustxt.Text) Then
             validInput = False
 
             MessageBox.Show("Invalid Rental Status")
+
+        Else
+            validInput = True
 
         End If
 
@@ -135,5 +140,9 @@ Public Class invBreakDown
         inventory.Show()
         Me.Close()
 
+    End Sub
+    Private Sub CenterButton()
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
     End Sub
 End Class

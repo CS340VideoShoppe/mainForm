@@ -1,18 +1,12 @@
 ﻿Imports System.Text.RegularExpressions
-
+'This class retreives and validates member information and passes it to the dbcontroler 
 Public Class customerAdd
     Dim validInput As Boolean = True
 
-    Dim validName As Boolean
-    Dim validPhone As Boolean
-
-
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        'Goes back to the previous form
 
-        ' If validName = True Then
 
         member.Show()
         Me.Hide()
@@ -21,17 +15,18 @@ Public Class customerAdd
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         memberID.Show()
         Me.Hide()
 
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
+        'checks for valid inputs, then inserts memeber into database
         isValid()
 
         If validInput = True Then
+            'create random MemberID and checks if it is already taken 
             Randomize()
             Dim num As Integer = Int(Rnd() * 99999)
 
@@ -42,7 +37,7 @@ Public Class customerAdd
 
 
 
-            Dim c1 As Customer = New Customer(num.ToString, memName.Text, phone.Text, a1, cr1, email.Text)
+            Dim c1 As Customer = New Customer(num.ToString, memName.Text, phone.Text, a1, cr1, email.Text, dob.Text)
 
             Dim db As New dbControler
 
@@ -52,6 +47,8 @@ Public Class customerAdd
             db.addMemberAddress(c1, a1)
             db.addCreditCard(cr1, c1)
 
+            MessageBox.Show("Member Created Successfully")
+
         Else
             MessageBox.Show("Error in creating member")
         End If
@@ -60,8 +57,8 @@ Public Class customerAdd
     End Sub
 
     Private Sub isValid()
-      
-
+        'Method to validate all input fields
+        
         If Not Regex.Match(memName.Text, "[(a-z)(A-Z)]", RegexOptions.IgnoreCase).Success Or String.IsNullOrEmpty(memName.Text) Or Not memName.Text.Contains(" "c) Or Regex.Match(memName.Text, "[0-9]", RegexOptions.IgnoreCase).Success Then
 
             MessageBox.Show("Invalid Name")
@@ -70,12 +67,10 @@ Public Class customerAdd
             memName.Clear()
 
             validInput = False
-        Else
+      
 
-            validName = True
 
-        End If
-        If Not Regex.IsMatch(phone.Text, "[0-9]") Or String.IsNullOrEmpty(phone.Text) Or phone.Text.Length <> 10 Then
+        ElseIf Not Regex.IsMatch(phone.Text, "[0-9]") Or String.IsNullOrEmpty(phone.Text) Or phone.Text.Length <> 10 Then
             phone.Focus()
             phone.Clear()
 
@@ -83,59 +78,65 @@ Public Class customerAdd
 
             validInput = False
 
-        Else
-            validPhone = True
-        End If
 
-        If Not Regex.Match(streetNum.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(streetNum.Text) Or Not Regex.Match(streetNum.Text, "[0-9]").Success Then
+
+
+        ElseIf Not Regex.Match(streetNum.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(streetNum.Text) Or Not Regex.Match(streetNum.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid Street")
 
-        End If
 
-        If Not Regex.Match(city.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(city.Text) Or Regex.Match(city.Text, "[0-9]").Success Then
+
+
+
+        ElseIf Not Regex.Match(city.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(city.Text) Or Regex.Match(city.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid city")
 
-        End If
 
-        If Not Regex.IsMatch(zip.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(zip.Text) Or zip.Text.Length <> 5 Then
+
+        ElseIf Not Regex.IsMatch(zip.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(zip.Text) Or zip.Text.Length <> 5 Then
             validInput = False
 
             MessageBox.Show("Invalid zip")
 
-        End If
-
-        If Not Regex.IsMatch(creditNum.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(creditNum.Text) Or creditNum.Text.Length <> 16 Then
+        ElseIf Not Regex.IsMatch(creditNum.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(creditNum.Text) Or creditNum.Text.Length <> 16 Then
             validInput = False
 
             MessageBox.Show("Invalid Credit Card Number")
 
-        End If
 
-        If Not Regex.IsMatch(secCode.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(secCode.Text) Or secCode.Text.Length <> 3 Then
+
+        ElseIf Not Regex.IsMatch(secCode.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(secCode.Text) Or secCode.Text.Length <> 3 Then
             validInput = False
 
             MessageBox.Show("Invalid Security Code")
 
-        End If
 
-        If Not Regex.IsMatch(Bank.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(Bank.Text) Then
+
+        ElseIf Not Regex.IsMatch(Bank.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(Bank.Text) Then
             validInput = False
 
             MessageBox.Show("Invalid Bank")
 
-        End If
 
-        'validate release date
+        ElseIf Not Regex.IsMatch(dob.Text, "^(19|20)\d\d[- /.]?(0[1-9]|1[012])[- /.]?(0[1-9]|[12][0-9]|3[01])$") Or String.IsNullOrEmpty(dob.Text) Then
+            MessageBox.Show("Invalid DOB")
+            validInput = False
+
+        ElseIf Not Regex.IsMatch(expDate.Text, "^(19|20)\d\d[- /.]?(0[1-9]|1[012])[- /.]?(0[1-9]|[12][0-9]|3[01])$") Or String.IsNullOrEmpty(expDate.Text) Then
+            MessageBox.Show("Invalid Expiration Date")
+            validInput = False
 
 
-        If ValidateEmail(email.Text) = False Then
+        ElseIf ValidateEmail(email.Text) = False Then
             validInput = False
             MessageBox.Show("Invalid Email Address")
 
+        Else
+            validInput = True
         End If
 
 
@@ -155,6 +156,16 @@ Public Class customerAdd
 
 
     Private Sub customerAdd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CenterButton()
 
+    End Sub
+
+    Private Sub secCode_TextChanged(sender As Object, e As EventArgs) Handles secCode.TextChanged
+
+    End Sub
+
+    Private Sub CenterButton()
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
     End Sub
 End Class

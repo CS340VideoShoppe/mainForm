@@ -1,4 +1,5 @@
-﻿Public Class address
+﻿'Class used to store member's address information and passed dbcontroler class to be stored into the memberAddress database
+Public Class address
 
     Private Property memID As String
     Public Property street As String

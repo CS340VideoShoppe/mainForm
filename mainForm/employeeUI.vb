@@ -7,6 +7,12 @@ Public Class employeeUI
     Dim rentalsadapter As New MySqlDataAdapter
     Dim rentalsdata As New DataTable
 
+    Dim schedulecommand As New MySqlCommand
+    Dim scheduleadapter As New MySqlDataAdapter
+    Dim scheduledata As New DataTable
+
+
+
     Public dbcomm As MySqlCommand
     Public dbread As MySqlDataReader
     Dim SQL As String
@@ -21,7 +27,7 @@ Public Class employeeUI
         Try
             conn.Open()
 
-            MsgBox("Connected")
+            ' MsgBox("Connected")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -42,56 +48,61 @@ Public Class employeeUI
         Dim state As String
         Dim zip As String
 
-
-        empID = Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        Name = Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        phone = Me.DataGridView1.Item(2, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        dateHired = Me.DataGridView1.Item(3, Me.DataGridView1.CurrentCell.RowIndex).Value
-        dob = Me.DataGridView1.Item(4, Me.DataGridView1.CurrentCell.RowIndex).Value
-        login = Me.DataGridView1.Item(5, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        password = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        street = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        city = Me.DataGridView1.Item(9, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        state = Me.DataGridView1.Item(10, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        zip = Me.DataGridView1.Item(11, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-
-
-        Dim e1 As Employee = New Employee(empID, name, phone, dateHired, dob, login, password)
-        Dim a1 As address = New address(empID, street, city, state, zip)
-
-        user.address = a1
-        user.employee = e1
+        Try
+            empID = Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            name = Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            phone = Me.DataGridView1.Item(2, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            dateHired = Me.DataGridView1.Item(3, Me.DataGridView1.CurrentCell.RowIndex).Value
+            dob = Me.DataGridView1.Item(4, Me.DataGridView1.CurrentCell.RowIndex).Value
+            login = Me.DataGridView1.Item(5, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            password = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            street = Me.DataGridView1.Item(7, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            city = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            state = Me.DataGridView1.Item(9, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            zip = Me.DataGridView1.Item(10, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
 
 
+            Dim e1 As Employee = New Employee(empID, name, phone, dateHired, dob, login, password)
+            Dim a1 As address = New address(empID, street, city, state, zip)
 
-        empInfo.Show()
-        Me.Hide()
+            user.address = a1
+            user.employee = e1
+
+            empInfo.Show()
+            Me.Close()
+        Catch ex As System.NullReferenceException
+            MessageBox.Show("Invalid Selection")
+           
+        End Try
+
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        DataGridView1.ClearSelection()
+
+        scheduledata.Clear()
+
         SQL = "SELECT employee.Name, schedules.scheduleID, schedules.employeeID, schedules.workDay, schedules.timeStart, schedules.timeEnd, schedules.hoursDaysAvailable, employeeaddress.street, employeeaddress.city, employeeaddress.state, employeeaddress.zipCode FROM SCHEDULES INNER join EMPLOYEEADDRESS on schedules.employeeID = employeeaddress.employeeID inner join employee on schedules.employeeID = employee.employeeID"
 
         connect()
 
 
-        DataGridView1.DataSource = rentalsdata
+        DataGridView2.DataSource = scheduledata
 
         Try
 
             conn.Open()
 
-            rentalscommand.Connection = conn
-            rentalscommand.CommandText = SQL
-            rentalsadapter.SelectCommand = rentalscommand
-            rentalsadapter.Fill(rentalsdata)
+            schedulecommand.Connection = conn
+            schedulecommand.CommandText = SQL
+            scheduleadapter.SelectCommand = schedulecommand
+            scheduleadapter.Fill(scheduledata)
 
-            DataGridView1.DataSource = rentalsdata
+            DataGridView2.DataSource = scheduledata
 
 
         Catch ex As Exception
-            MessageBox.Show("Cannot connect to database: ")
+            '  MessageBox.Show("Cannot connect to database: ")
         Finally
             conn.Close()
             conn.Dispose()
@@ -99,9 +110,7 @@ Public Class employeeUI
 
 
 
-        '  empSchOverview.Show()
-        '  Me.Hide()
-
+      
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -119,7 +128,9 @@ Public Class employeeUI
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        SQL = "SELECT * FROM EMPLOYEE LEFT JOIN EMPLOYEEADDRESS ON EMPLOYEE.EMPLOYEEID = EMPLOYEEADDRESS.EMPLOYEEID"
+        rentalsdata.Clear()
+
+        SQL = "SELECT DISTINCT EMPLOYEE.EMPLOYEEID, EMPLOYEE.NAME, EMPLOYEE.PHONE, EMPLOYEE.DATEHIRED, EMPLOYEE.DOB, EMPLOYEE.LOGIN, EMPLOYEE.PASSWORD, EMPLOYEEADDRESS.STREET, EMPLOYEEADDRESS.CITY, EMPLOYEEADDRESS.STATE, EMPLOYEEADDRESS.ZIPCODE FROM EMPLOYEE LEFT JOIN EMPLOYEEADDRESS ON EMPLOYEE.EMPLOYEEID = EMPLOYEEADDRESS.EMPLOYEEID"
 
         connect()
 
@@ -144,6 +155,25 @@ Public Class employeeUI
             conn.Close()
             conn.Dispose()
         End Try
+        Button2.Enabled = True
 
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        user.isLoggedIn = False
+        Logon.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub employeeUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CenterButton()
+
+        Button2.Enabled = False
+
+    End Sub
+
+    Private Sub CenterButton()
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
     End Sub
 End Class

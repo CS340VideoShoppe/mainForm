@@ -85,3 +85,4 @@ C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\o
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.invBreakDown.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.transReturn.resources
 C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.newCard.resources
+C:\Users\marc2021\Documents\Visual Studio 2012\Projects\vbVideoShoppe\mainForm\obj\Debug\mainForm.payFees.resources

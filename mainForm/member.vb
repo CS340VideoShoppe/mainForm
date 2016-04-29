@@ -1,6 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
-
+'This method allows the user to view all members, search for members, select a single member, and launch the add member form
+'It contains some database functionality for propertly retrieving member information 
 Public Class member
+    Dim isNull As Boolean = False
+
 
     Dim conn As New MySqlConnection
     Dim MembersCommand As New MySqlCommand
@@ -30,7 +33,7 @@ Public Class member
         Try
             conn.Open()
 
-            MsgBox("Connected")
+            ' MsgBox("Connected")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -39,8 +42,12 @@ Public Class member
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        SQL = "SELECT distinct members.memberID, members.name, members.phone, members.emailAddress, memberaddress.street, memberaddress.city, memberaddress.state, memberaddress.zipCode, creditcard.number, creditcard.expirationDate FROM MEMBERS LEFT JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Left JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID WHERE MEMBERS.NAME LIKE '%" & nameSearch.Text & "%' OR MEMBERS.PHONE = '" & phoneSearch.Text & "' "
-       
+        'Method to search for members by phone or name
+        'Clears data for new search
+        MembersData.Clear()
+
+        SQL = "SELECT distinct members.memberID, members.name, members.phone, members.emailAddress, members.DOB, memberaddress.street, memberaddress.city, memberaddress.state, memberaddress.zipCode, creditcard.number, creditcard.expirationDate FROM MEMBERS LEFT JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Left JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID WHERE MEMBERS.NAME LIKE '%" & nameSearch.Text & "%' OR MEMBERS.PHONE = '" & phoneSearch.Text & "' "
+
         connect()
 
 
@@ -61,7 +68,7 @@ Public Class member
 
 
         Catch ex As Exception
-            MessageBox.Show("Cannot connect to database: ")
+            '  MessageBox.Show("Cannot connect to database: ")
         Finally
             conn.Close()
             conn.Dispose()
@@ -73,23 +80,27 @@ Public Class member
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'displays the form to add members
         customerAdd.Show()
-        Me.Hide()
+        Me.Close()
+
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Main.Show()
-        Me.Hide()
+        Me.Close()
+
 
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         'Method to display all members to the datagrid
+        MembersData.Clear()
 
         connect()
 
-        SQL = "SELECT distinct members.memberID, members.name, members.phone, members.emailAddress, memberaddress.street, memberaddress.city, memberaddress.state, memberaddress.zipCode, creditcard.number, creditcard.expirationDate FROM MEMBERS LEFT JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Left JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID"
+        SQL = "SELECT distinct members.memberID, members.name, members.phone,  members.emailAddress, members.DOB, memberaddress.street, memberaddress.city, memberaddress.state, memberaddress.zipCode, creditcard.number, creditcard.expirationDate FROM MEMBERS LEFT JOIN MEMBERADDRESS ON MEMBERS.MEMBERID = MEMBERADDRESS.MEMBERID Left JOIN CREDITCARD ON MEMBERS.MEMBERID = CREDITCARD.MEMBERID"
 
         Dim c As dbControler = New dbControler
 
@@ -111,7 +122,7 @@ Public Class member
 
 
         Catch ex As Exception
-            MessageBox.Show("Cannot connect to database: ")
+
         Finally
             conn.Close()
             conn.Dispose()
@@ -121,6 +132,7 @@ Public Class member
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
         Dim id As String
         Dim name As String
         Dim phone As String
@@ -131,59 +143,72 @@ Public Class member
         Dim zip As String
         Dim card As String
         Dim expDate As Date
-       
-      
-
-        id = Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        name = Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        phone = Me.DataGridView1.Item(2, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        email = Me.DataGridView1.Item(3, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        street = Me.DataGridView1.Item(4, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        city = Me.DataGridView1.Item(5, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        state = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        zip = Me.DataGridView1.Item(7, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        card = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        expDate = Me.DataGridView1.Item(9, Me.DataGridView1.CurrentCell.RowIndex).Value
-        'rentals
-        ' rentID = Me.DataGridView1.Item(13, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        ' upc = Me.DataGridView1.Item(14, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        ' dueDate = Me.DataGridView1.Item(15, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        ' price = Me.DataGridView1.Item(16, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+        Dim dob As Date
 
 
-        Dim c1 As Customer = New Customer(id, name, phone, email)
-        Dim a1 As address = New address(id, street, city, state, zip)
-        Dim cc As creditCard = New creditCard(id, card, expDate)
+        Try
+            If Not String.IsNullOrWhiteSpace(Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Then
+
+                id = Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                name = Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                phone = Me.DataGridView1.Item(2, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                email = Me.DataGridView1.Item(3, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                dob = Me.DataGridView1.Item(4, Me.DataGridView1.CurrentCell.RowIndex).Value
+                street = Me.DataGridView1.Item(5, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                city = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                state = Me.DataGridView1.Item(7, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                zip = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                card = Me.DataGridView1.Item(9, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+                expDate = Me.DataGridView1.Item(10, Me.DataGridView1.CurrentCell.RowIndex).Value
+
+                Dim c1 As Customer = New Customer(id, name, phone, email, dob)
+                Dim a1 As address = New address(id, street, city, state, zip)
+                Dim cc As creditCard = New creditCard(id, card, expDate)
 
 
-        ' Dim ren1 As Rental = New Rental(rentID, id, upc, dueDate, price)
+                user.customer = c1
+                user.address = a1
+                user.creditCard = cc
 
+                memInfo.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("Invalid Input")
 
-
-        'set up sql to get email, address, rentals, wishlist, etc
-
-
-        user.customer = c1
-        user.address = a1
-        user.creditCard = cc
-        ' user.rental = ren1
-
-        memInfo.Show()
-        Me.Close()
-
-
-
-
-
+            End If
+        Catch ex As System.NullReferenceException
+            MessageBox.Show("Invalid Input")
+        End Try
 
     End Sub
 
     Public Sub results()
-        'Finish search results
-        If String.IsNullOrEmpty(Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Then
+
+        If String.IsNullOrWhiteSpace(Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Or String.IsNullOrEmpty(Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Or String.IsNullOrWhiteSpace(Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Then
             MessageBox.Show("No results found")
-            DataGridView1.Rows.Clear()
+            MembersData.Clear()
+
 
         End If
+    End Sub
+
+    Private Sub nameSearch_TextChanged(sender As Object, e As EventArgs) Handles nameSearch.TextChanged
+
+    End Sub
+
+    Private Sub member_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CenterButton()
+
+    End Sub
+
+    Private Sub CenterButton()
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        user.isLoggedIn = False
+        Logon.Show()
+        Me.Hide()
     End Sub
 End Class
