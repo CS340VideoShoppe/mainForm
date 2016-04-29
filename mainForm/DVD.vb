@@ -1,18 +1,6 @@
 ﻿Public Class DVD
 
-    Private _numAvl As Integer
 
-    Sub New(upc As String)
-        ' TODO: Complete member initialization 
-        _UPC = upc
-    End Sub
-
-    Sub New(upc As String, onHand As Integer, numAvl As Integer)
-        ' TODO: Complete member initialization 
-        _upc = upc
-        _onHand = onHand
-        _numAvl = numAvl
-    End Sub
 
     Private Property UPC As String
     Private Property title As String
@@ -45,7 +33,7 @@
 
 
     End Sub
-    Public Sub dvd(upc As String, rentCount As Integer, onHand As Integer)
+    Public Sub New(upc As String, rentCount As Integer, onHand As Integer)
         Me.UPC = upc
         Me.rentCount = rentCount
         Me.onHand = onHand
@@ -53,21 +41,6 @@
     End Sub
 
 
-    Public Sub addDVD()
-
-    End Sub
-
-    Public Sub removeDVD()
-
-    End Sub
-
-    Public Sub orderDVD()
-
-    End Sub
-
-    Public Sub categorize()
-
-    End Sub
 
     Public Function getUPC() As String
         Return Me.UPC

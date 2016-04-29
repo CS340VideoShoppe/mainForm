@@ -1,4 +1,6 @@
-﻿Imports System.Globalization
+﻿'This method accecpts input for dvd information, validates the input, and adds the dvd to the dvds database by passing
+'it to the dbcontroler class
+Imports System.Globalization
 Imports System.Text.RegularExpressions
 
 Public Class invInfo
@@ -19,7 +21,7 @@ Public Class invInfo
             db.addCategory(d1)
             db.addDVD_Info(d1)
 
-            Me.Hide()
+
         Else
             MessageBox.Show("Error in creating title")
         End If
@@ -39,7 +41,8 @@ Public Class invInfo
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         inventory.Show()
-        Me.Hide()
+        Me.Close()
+
 
     End Sub
 
@@ -54,73 +57,74 @@ Public Class invInfo
             title.Clear()
 
             validInput = False
-
-        End If
-        If Not Regex.IsMatch(genretxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(genretxt.Text) Or Regex.IsMatch(genretxt.Text, "[0-9]") Then
+        
+        ElseIf Not Regex.IsMatch(genretxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(genretxt.Text) Or Regex.IsMatch(genretxt.Text, "[0-9]") Then
             genretxt.Focus()
             genretxt.Clear()
 
             MessageBox.Show("Invalid Genre")
 
             validInput = False
+     
 
-        End If
-
-        If Not Regex.Match(actorstxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(actorstxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
+        ElseIf Not Regex.Match(actorstxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(actorstxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid Actors")
+       
 
-        End If
-
-        If Not Regex.Match(directortxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(directortxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
+        ElseIf Not Regex.Match(directortxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(directortxt.Text) Or Regex.Match(actorstxt.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid Director")
+    
 
-        End If
-
-        If Not Regex.Match(languagetxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(languagetxt.Text) Or Regex.Match(languagetxt.Text, "[0-9]").Success Then
+        ElseIf Not Regex.Match(languagetxt.Text, "[(a-z)(A-Z)]").Success Or String.IsNullOrEmpty(languagetxt.Text) Or Regex.Match(languagetxt.Text, "[0-9]").Success Then
             validInput = False
 
             MessageBox.Show("Invalid Language")
+       
 
-        End If
-
-        If Not Regex.IsMatch(upc.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(upc.Text) Or UPCtxt.Text.Length <> 12 Then
+        ElseIf Not Regex.IsMatch(upc.Text, "[0-9 ]") Or String.IsNullOrEmpty(upc.Text) Or UPCtxt.Text.Length <> 12 Then
             validInput = False
 
             MessageBox.Show("Invalid UPC")
+       
 
-        End If
-
-        If Not Regex.IsMatch(agetxt.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(agetxt.Text) Or agetxt.Text.Length > 5 Then
+        ElseIf String.IsNullOrEmpty(agetxt.Text) Or agetxt.Text.Length > 5 Then
             validInput = False
 
             MessageBox.Show("Invalid Age Rating")
+       
 
-        End If
-
-        If Not Regex.IsMatch(onHand.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(onHand.Text) Or onHand.Text.Length < 0 Then
+        ElseIf Not Regex.IsMatch(onHand.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(onHand.Text) Or onHand.Text.Length < 0 Then
             validInput = False
 
             MessageBox.Show("Invalid Number on Hand")
+       
 
-        End If
-
-        If Not Regex.IsMatch(statustxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(statustxt.Text) Then
+        ElseIf Not Regex.IsMatch(statustxt.Text, "[(a-z)(A-Z)]") Or String.IsNullOrEmpty(statustxt.Text) Then
             validInput = False
 
             MessageBox.Show("Invalid Rental Status")
+      
 
+        ElseIf Not Regex.IsMatch(releaseDatetxt.Text, "^(19|20)\d\d[- /.]?(0[1-9]|1[012])[- /.]?(0[1-9]|[12][0-9]|3[01])$") Or String.IsNullOrEmpty(releaseDatetxt.Text) Then
+            MessageBox.Show("Invalid Release Date")
+            validInput = False
+        Else
+            validInput = True
         End If
 
+    End Sub
 
+    Private Sub invInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CenterButton()
 
+    End Sub
 
-
-
-
-
+    Private Sub CenterButton()
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
     End Sub
 End Class

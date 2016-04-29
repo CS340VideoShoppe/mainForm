@@ -9,9 +9,15 @@ Public Class user
     Public Shared employee As Employee
     Public Shared startDate As Date
     Public Shared endDate As Date
+    Public Shared employeeUser As employeeUser
+    Public Shared isLoggedIn = True
+
 
     Public Shared cardNum As Integer
     Public Shared expDate As Date
+    Public Shared fees As Double
+    Public Shared daysPast As Integer
+
 
 
 

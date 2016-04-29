@@ -1,4 +1,5 @@
-﻿Public Class Customer
+﻿'Class used to store customer information. This class is passed dbcontroler class to be stored into the members and credit card databases
+Public Class Customer
 
     Private Property memberID As String
     Private Property name As String
@@ -12,17 +13,20 @@
     Private Property overdueItems As DVD
     Private Property lateFees As String
     Private Property requestedItems As DVD
+    Private Property dob As Date
 
-    Public Sub New(memberID As String, name As String, phones As String, emailAddress As String)
+
+    Public Sub New(memberID As String, name As String, phones As String, emailAddress As String, dob As Date)
         Me.memberID = memberID
         Me.name = name
         Me.phones = phones
         Me.emailAddress = emailAddress
+        Me.dob = dob
 
     End Sub
 
     Public Sub New(memberID As String, name As String, phones As String,
-                   address As address, creditCards As creditCard, emailAddress As String)
+                   address As address, creditCards As creditCard, emailAddress As String, dob As Date)
 
         Me.memberID = memberID
         Me.name = name
@@ -30,6 +34,8 @@
         Me.address = address
         Me.creditCards = creditCards
         Me.emailAddress = emailAddress
+        Me.dob = dob
+
 
 
     End Sub
@@ -38,14 +44,6 @@
         Return Me.rentalHistory
 
     End Function
-
-    Public Sub addFamilyMember()
-
-    End Sub
-
-    Public Sub revokeMembership()
-
-    End Sub
 
     Public Function getMemberID() As String
         Return Me.memberID
@@ -71,6 +69,10 @@
 
     End Function
 
+    Public Function getDOB() As Date
+        Return Me.dob
+
+    End Function
 
 
 

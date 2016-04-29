@@ -1,7 +1,7 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class payment
-    Dim isValid As Boolean
+    Dim isValid As Boolean = True
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
@@ -17,6 +17,8 @@ Public Class payment
     End Sub
 
     Private Sub payment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        centerButton()
+
         Dim dvd As DVD = user.dvd
 
         upctxt.Text = dvd.getUPC
@@ -48,21 +50,23 @@ Public Class payment
 
 
 
-        End If
 
-        If RadioButton2.Checked = True Then
+
+        ElseIf RadioButton2.Checked = True Then
             If Not Regex.IsMatch(creditNum.Text, "^[0-9 ]+$") Or String.IsNullOrEmpty(creditNum.Text) Or creditNum.Text.Length <> 16 Then
 
                 MessageBox.Show("Invalid Credit Card Number")
                 creditNum.Clear()
                 creditNum.Focus()
                 isValid = False
+           
 
             End If
 
             If expDate.Text < Date.Now Then
                 MessageBox.Show("Invalid expiration date")
                 isValid = False
+            
 
             End If
 
@@ -73,23 +77,15 @@ Public Class payment
 
 
 
-        If String.IsNullOrEmpty(pricetxt.ToString) Then
-            MessageBox.Show("Please enter a price")
-            pricetxt.Clear()
-            pricetxt.Focus()
-            isValid = False
+      
 
-
-        End If
-
-        If isvalid = True Then
+        If isValid = True Then
             cont.connect()
             cont.updateDVD(d1)
             cont.addRental(r2)
             MessageBox.Show("Success. " & titletxt.Text & " will be due on " & dueDate.ToString & " Price: 4.75")
         End If
 
-     
 
 
 
@@ -99,5 +95,10 @@ Public Class payment
 
 
 
+
+    End Sub
+    Private Sub CenterButton()
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
     End Sub
 End Class

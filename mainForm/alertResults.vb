@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿'This class initially displays alerts for the member selected and allows the user to search for alerts by member name or phone number
+'or view all alerts for every member
+Imports MySql.Data.MySqlClient
 
 Public Class alertResults
 
@@ -21,9 +23,9 @@ Public Class alertResults
         Try
             conn.Open()
 
-            MsgBox("Connected")
+            ' MsgBox("Connected")
         Catch ex As Exception
-            MsgBox(ex.Message)
+            '  MsgBox(ex.Message)
         End Try
         conn.Close()
 
@@ -31,11 +33,15 @@ Public Class alertResults
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         memInfo.Show()
-        Me.Hide()
+        Me.Close()
+
 
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        membersdata.Clear()
+
+
         SQL = "SELECT * FROM MEMBERS Inner JOIN ALERTS ON MEMBERS.MEMBERID = Alerts.MEMBERID "
 
         connect()
@@ -64,40 +70,42 @@ Public Class alertResults
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        membersdata.Clear()
 
 
-        If RadioButton1.Checked Then
-            SQL = "SELECT * FROM MEMBERS Inner JOIN ALERTS ON MEMBERS.MEMBERID = Alerts.MEMBERID AND MEMBERS.NAME =  '" & srch.Text & "'"
+        SQL = "SELECT DISTINCT MEMBERS.MEMBERID, MEMBERS.NAME, MEMBERS.PHONE, MEMBERS.EMAILADDRESS, MEMBERS.DOB, ALERTS.ALERTID, ALERTS.TYPE, ALERTS.ALERTCOUNT, ALERTS.ALERTSTATUS, ALERTS.MESSAGE FROM MEMBERS Inner JOIN ALERTS ON MEMBERS.MEMBERID = Alerts.MEMBERID AND MEMBERS.NAME like '%" & srch.Text & "%' OR MEMBERS.PHONE = '" & srch.Text & "' "
 
-            connect()
+        connect()
+
+        DataGridView1.DataSource = membersdata
+
+        Try
+
+            conn.Open()
+
+            memberscommand.Connection = conn
+            memberscommand.CommandText = SQL
+            membersadapter.SelectCommand = memberscommand
+            membersadapter.Fill(membersdata)
 
             DataGridView1.DataSource = membersdata
 
-            Try
 
-                conn.Open()
+        Catch ex As Exception
+            MessageBox.Show("Cannot connect to database: ")
+        Finally
+            conn.Close()
+            conn.Dispose()
+        End Try
 
-                memberscommand.Connection = conn
-                memberscommand.CommandText = SQL
-                membersadapter.SelectCommand = memberscommand
-                membersadapter.Fill(membersdata)
-
-                DataGridView1.DataSource = membersdata
-
-
-            Catch ex As Exception
-                MessageBox.Show("Cannot connect to database: ")
-            Finally
-                conn.Close()
-                conn.Dispose()
-            End Try
-        End If
 
 
 
     End Sub
 
     Private Sub alertResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CenterButton()
+
         Dim c1 As Customer = user.customer
 
         SQL = "SELECT * FROM MEMBERS Inner JOIN ALERTS ON MEMBERS.MEMBERID = Alerts.MEMBERID AND MEMBERS.NAME =  '" & c1.getName & "'"
@@ -125,5 +133,17 @@ Public Class alertResults
             conn.Dispose()
         End Try
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+    Private Sub CenterButton()
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
     End Sub
 End Class

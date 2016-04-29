@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿'This allows the user to search inventory, select title, view all titles, and launch financial reports
+Imports MySql.Data.MySqlClient
 
 Public Class inventory
 
@@ -21,7 +22,7 @@ Public Class inventory
         Try
             conn.Open()
 
-            MsgBox("Connected")
+            '  MsgBox("Connected")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -34,20 +35,22 @@ Public Class inventory
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        dvdsData.Clear()
+
         If titlechk.Checked Then
-            SQL = "SELECT * FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVDS.title = '" & TextBox1.Text & "'"
+            SQL = "SELECT DISTINCT DVDS.UPC, DVDS.TITLE, DVDS.STATUS, DVDS.RENTALCOUNT, DVDS.NUMBERAVAILABLE, CATEGORIES.GENRE, CATEGORIES.LANGUAGE, CATEGORIES.RELEASEDATE, DVD_INFO.AGERATING, DVD_INFO.ACTORS, DVD_INFO.DIRECTORS FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVDS.title like '%" & TextBox1.Text & "%'"
         ElseIf genreChk.Checked Then
-            SQL = "SELECT * FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVDS.genre = '" & TextBox1.Text & "'"
+            SQL = "SELECT DISTINCT DVDS.UPC, DVDS.TITLE, DVDS.STATUS, DVDS.RENTALCOUNT, DVDS.NUMBERAVAILABLE, CATEGORIES.GENRE, CATEGORIES.LANGUAGE, CATEGORIES.RELEASEDATE, DVD_INFO.AGERATING, DVD_INFO.ACTORS, DVD_INFO.DIRECTORS FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND categories.genre like '%" & TextBox1.Text & "%'"
 
         ElseIf languagechk.Checked Then
-            SQL = "SELECT * FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVDS.language = '" & TextBox1.Text & "'"
+            SQL = "SELECT DISTINCT DVDS.UPC, DVDS.TITLE, DVDS.STATUS, DVDS.RENTALCOUNT, DVDS.NUMBERAVAILABLE, CATEGORIES.GENRE, CATEGORIES.LANGUAGE, CATEGORIES.RELEASEDATE, DVD_INFO.AGERATING, DVD_INFO.ACTORS, DVD_INFO.DIRECTORS FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND categories.language like '%" & TextBox1.Text & "%'"
 
         ElseIf directorChk.Checked Then
-            SQL = "SELECT * FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVDS.directors = '" & TextBox1.Text & "'"
+            SQL = "SELECT DISTINCT DVDS.UPC, DVDS.TITLE, DVDS.STATUS, DVDS.RENTALCOUNT, DVDS.NUMBERAVAILABLE, CATEGORIES.GENRE, CATEGORIES.LANGUAGE, CATEGORIES.RELEASEDATE, DVD_INFO.AGERATING, DVD_INFO.ACTORS, DVD_INFO.DIRECTORS FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVD_info.directors like '%" & TextBox1.Text & "%'"
 
 
         ElseIf actorChk.Checked Then
-            SQL = "SELECT * FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVDS.actors = '" & TextBox1.Text & "'"
+            SQL = "SELECT * FROM DVDS inner JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC inner JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC AND DVD_info.actors like '%" & TextBox1.Text & "%'"
         Else
             MessageBox.Show("Please enter a value")
 
@@ -68,14 +71,17 @@ Public Class inventory
             dvdsAdapter.Fill(dvdsData)
 
             DataGridView1.DataSource = dvdsData
+            results()
+
 
 
         Catch ex As Exception
-            MessageBox.Show("Cannot connect to database: ")
+            '  MessageBox.Show("Cannot connect to database: ")
         Finally
             conn.Close()
             conn.Dispose()
         End Try
+        Button5.Enabled = True
 
     End Sub
 
@@ -93,9 +99,11 @@ Public Class inventory
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        dvdsData.Clear()
+
         connect()
 
-        SQL = "SELECT * FROM DVDS LEFT JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC Left JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC"
+        SQL = "SELECT DISTINCT DVDS.UPC, DVDS.TITLE, DVDS.STATUS, DVDS.RENTALCOUNT, DVDS.NUMBERAVAILABLE, CATEGORIES.GENRE, CATEGORIES.LANGUAGE, CATEGORIES.RELEASEDATE, DVD_INFO.AGERATING, DVD_INFO.ACTORS, DVD_INFO.DIRECTORS FROM DVDS LEFT JOIN CATEGORIES ON DVDS.UPC = CATEGORIES.UPC Left JOIN DVD_INFO ON DVDS.UPC = DVD_INFO.UPC"
 
        
         Try
@@ -116,6 +124,8 @@ Public Class inventory
             conn.Close()
             conn.Dispose()
         End Try
+        Button5.Enabled = True
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -131,34 +141,69 @@ Public Class inventory
         Dim rentCount As Integer
         Dim onHand As Integer
 
+        Try
+            UPC = Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            title = Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            rentalStatus = Me.DataGridView1.Item(2, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            rentCount = Me.DataGridView1.Item(3, Me.DataGridView1.CurrentCell.RowIndex).Value
+            onHand = Me.DataGridView1.Item(4, Me.DataGridView1.CurrentCell.RowIndex).Value
+            genre = Me.DataGridView1.Item(5, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            language = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            releaseDate = Me.DataGridView1.Item(7, Me.DataGridView1.CurrentCell.RowIndex).Value
+            ageRating = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            actors = Me.DataGridView1.Item(9, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            director = Me.DataGridView1.Item(10, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
 
-        UPC = Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        title = Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        rentalStatus = Me.DataGridView1.Item(2, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        rentCount = Me.DataGridView1.Item(3, Me.DataGridView1.CurrentCell.RowIndex).Value
-        onHand = Me.DataGridView1.Item(4, Me.DataGridView1.CurrentCell.RowIndex).Value
-        genre = Me.DataGridView1.Item(6, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        language = Me.DataGridView1.Item(7, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        releaseDate = Me.DataGridView1.Item(8, Me.DataGridView1.CurrentCell.RowIndex).Value
-        ageRating = Me.DataGridView1.Item(10, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        actors = Me.DataGridView1.Item(11, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
-        director = Me.DataGridView1.Item(12, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString
+            Dim d1 As DVD = New DVD(UPC, title, rentalStatus, genre, language, ageRating, releaseDate, director, actors, rentCount, onHand)
 
-        Dim d1 As DVD = New DVD(UPC, title, rentalStatus, genre, language, ageRating, releaseDate, director, actors, rentCount, onHand)
+            user.dvd = d1
+            invBreakDown.Show()
+            Me.Close()
 
-        user.dvd = d1
+        Catch ex As System.NullReferenceException
+            MessageBox.Show("Invalid Selection")
+        End Try
 
-        invBreakDown.Show()
-        Me.Close()
+     
 
-         
 
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         finReport.Show()
 
-        Me.Hide()
+        Me.Close()
+
 
     End Sub
+
+    Private Sub inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Button5.Enabled = False
+        CenterButton()
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        user.isLoggedIn = False
+        Logon.Show()
+        Me.Hide()
+    End Sub
+
+
+    Private Sub CenterButton()
+        'Method to center all containors 
+        GroupBox1.Top = (Me.ClientSize.Height / 2) - (GroupBox1.Height / 2)
+        GroupBox1.Left = (Me.ClientSize.Width / 2) - (GroupBox1.Width / 2)
+    End Sub
+
+    Public Sub results()
+        'Method to validate search results
+        If String.IsNullOrWhiteSpace(Me.DataGridView1.Item(0, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Or String.IsNullOrWhiteSpace(Me.DataGridView1.Item(1, Me.DataGridView1.CurrentCell.RowIndex).Value.ToString) Then
+            MessageBox.Show("No results found")
+            dvdsData.Clear()
+
+
+        End If
+    End Sub
+
 End Class

@@ -104,6 +104,7 @@
     <Compile Include="DVD.vb" />
     <Compile Include="EmailAddress.vb" />
     <Compile Include="Employee.vb" />
+    <Compile Include="employeeUser.vb" />
     <Compile Include="ExpiryAlert.vb" />
     <Compile Include="finance.designer.vb">
       <DependentUpon>finance.vb</DependentUpon>
@@ -189,6 +190,7 @@
     <Compile Include="invBreakDown.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="lateFee.vb" />
     <Compile Include="memberID.Designer.vb">
       <DependentUpon>memberID.vb</DependentUpon>
     </Compile>
@@ -282,6 +284,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OverdueAlert.vb" />
+    <Compile Include="payFees.Designer.vb">
+      <DependentUpon>payFees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payFees.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Phone.vb" />
     <Compile Include="Receipt.vb" />
     <Compile Include="Rental.vb" />
@@ -438,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newCard.resx">
       <DependentUpon>newCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payFees.resx">
+      <DependentUpon>payFees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="salesInfo.resx">
       <DependentUpon>salesInfo.vb</DependentUpon>

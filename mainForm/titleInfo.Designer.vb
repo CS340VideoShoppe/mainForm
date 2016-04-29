@@ -35,7 +35,9 @@ Partial Class titleInfo
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -60,7 +62,7 @@ Partial Class titleInfo
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(11, 287)
+        Me.Button3.Location = New System.Drawing.Point(6, 287)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(85, 48)
         Me.Button3.TabIndex = 16
@@ -70,7 +72,7 @@ Partial Class titleInfo
         'Button4
         '
         Me.Button4.Enabled = False
-        Me.Button4.Location = New System.Drawing.Point(707, 244)
+        Me.Button4.Location = New System.Drawing.Point(636, 226)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(94, 48)
         Me.Button4.TabIndex = 17
@@ -80,7 +82,7 @@ Partial Class titleInfo
         'languagechk
         '
         Me.languagechk.AutoSize = True
-        Me.languagechk.Location = New System.Drawing.Point(42, 188)
+        Me.languagechk.Location = New System.Drawing.Point(38, 82)
         Me.languagechk.Name = "languagechk"
         Me.languagechk.Size = New System.Drawing.Size(91, 22)
         Me.languagechk.TabIndex = 24
@@ -90,7 +92,7 @@ Partial Class titleInfo
         'actorChk
         '
         Me.actorChk.AutoSize = True
-        Me.actorChk.Location = New System.Drawing.Point(130, 155)
+        Me.actorChk.Location = New System.Drawing.Point(229, 120)
         Me.actorChk.Name = "actorChk"
         Me.actorChk.Size = New System.Drawing.Size(62, 22)
         Me.actorChk.TabIndex = 23
@@ -100,7 +102,7 @@ Partial Class titleInfo
         'directorChk
         '
         Me.directorChk.AutoSize = True
-        Me.directorChk.Location = New System.Drawing.Point(130, 117)
+        Me.directorChk.Location = New System.Drawing.Point(229, 82)
         Me.directorChk.Name = "directorChk"
         Me.directorChk.Size = New System.Drawing.Size(80, 22)
         Me.directorChk.TabIndex = 22
@@ -110,7 +112,7 @@ Partial Class titleInfo
         'genreChk
         '
         Me.genreChk.AutoSize = True
-        Me.genreChk.Location = New System.Drawing.Point(42, 155)
+        Me.genreChk.Location = New System.Drawing.Point(47, 120)
         Me.genreChk.Name = "genreChk"
         Me.genreChk.Size = New System.Drawing.Size(68, 22)
         Me.genreChk.TabIndex = 21
@@ -120,7 +122,7 @@ Partial Class titleInfo
         'titlechk
         '
         Me.titlechk.AutoSize = True
-        Me.titlechk.Location = New System.Drawing.Point(42, 117)
+        Me.titlechk.Location = New System.Drawing.Point(144, 82)
         Me.titlechk.Name = "titlechk"
         Me.titlechk.Size = New System.Drawing.Size(54, 22)
         Me.titlechk.TabIndex = 20
@@ -130,7 +132,7 @@ Partial Class titleInfo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(39, 78)
+        Me.Label1.Location = New System.Drawing.Point(35, 43)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(118, 18)
         Me.Label1.TabIndex = 19
@@ -138,14 +140,14 @@ Partial Class titleInfo
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(163, 78)
+        Me.TextBox1.Location = New System.Drawing.Point(159, 40)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(171, 24)
         Me.TextBox1.TabIndex = 18
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(36, 216)
+        Me.Button5.Location = New System.Drawing.Point(63, 160)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(228, 42)
         Me.Button5.TabIndex = 25
@@ -155,37 +157,50 @@ Partial Class titleInfo
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(607, 37)
+        Me.DataGridView1.Location = New System.Drawing.Point(528, 19)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(303, 201)
         Me.DataGridView1.TabIndex = 26
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.Button5)
+        Me.GroupBox1.Controls.Add(Me.Button4)
+        Me.GroupBox1.Controls.Add(Me.languagechk)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.genreChk)
+        Me.GroupBox1.Controls.Add(Me.actorChk)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.directorChk)
+        Me.GroupBox1.Controls.Add(Me.titlechk)
+        Me.GroupBox1.Location = New System.Drawing.Point(102, 23)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(852, 341)
+        Me.GroupBox1.TabIndex = 27
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "New Transaction"
         '
         'titleInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(993, 347)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.languagechk)
-        Me.Controls.Add(Me.actorChk)
-        Me.Controls.Add(Me.directorChk)
-        Me.Controls.Add(Me.genreChk)
-        Me.Controls.Add(Me.titlechk)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.BackColor = System.Drawing.SystemColors.InfoText
+        Me.ClientSize = New System.Drawing.Size(1113, 401)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "titleInfo"
         Me.Text = "Sales Transaction"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
@@ -201,4 +216,5 @@ Partial Class titleInfo
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

@@ -22,17 +22,20 @@ Partial Class Logon
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Logon))
         Me.uName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pWord = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'uName
         '
-        Me.uName.Location = New System.Drawing.Point(214, 65)
+        Me.uName.Location = New System.Drawing.Point(276, 73)
         Me.uName.Name = "uName"
         Me.uName.Size = New System.Drawing.Size(157, 20)
         Me.uName.TabIndex = 0
@@ -41,7 +44,7 @@ Partial Class Logon
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(90, 66)
+        Me.Label1.Location = New System.Drawing.Point(171, 74)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(70, 16)
         Me.Label1.TabIndex = 1
@@ -49,7 +52,7 @@ Partial Class Logon
         '
         'pWord
         '
-        Me.pWord.Location = New System.Drawing.Point(214, 131)
+        Me.pWord.Location = New System.Drawing.Point(276, 99)
         Me.pWord.Name = "pWord"
         Me.pWord.Size = New System.Drawing.Size(157, 20)
         Me.pWord.TabIndex = 2
@@ -58,7 +61,7 @@ Partial Class Logon
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(90, 131)
+        Me.Label2.Location = New System.Drawing.Point(171, 103)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 16)
         Me.Label2.TabIndex = 3
@@ -68,7 +71,7 @@ Partial Class Logon
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(187, 9)
+        Me.Label3.Location = New System.Drawing.Point(187, 16)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(225, 20)
         Me.Label3.TabIndex = 4
@@ -76,29 +79,43 @@ Partial Class Logon
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(214, 194)
+        Me.Button1.Location = New System.Drawing.Point(224, 206)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 38)
+        Me.Button1.Size = New System.Drawing.Size(149, 78)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Log In"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.pWord)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.uName)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Location = New System.Drawing.Point(100, 25)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(583, 338)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Login"
         '
         'Logon
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.ClientSize = New System.Drawing.Size(521, 270)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.pWord)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.uName)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(941, 375)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Logon"
         Me.Text = "Log In"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents uName As System.Windows.Forms.TextBox
@@ -107,4 +124,5 @@ Partial Class Logon
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

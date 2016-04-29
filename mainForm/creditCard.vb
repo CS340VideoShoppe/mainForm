@@ -1,4 +1,5 @@
-﻿Public Class creditCard
+﻿'This class is used to store credit card information and is passed to the dbcontroler class to be stored in the creditcard schema 
+Public Class creditCard
 
     Private Property cardNumber As String
     Private Property id As String
